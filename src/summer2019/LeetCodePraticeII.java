@@ -1423,6 +1423,7 @@ public class LeetCodePraticeII {
         int left = 0;
         int right = nums.length-1;
         while(left <= right){
+            //处理重复的值
             while(left < right && nums[left] == nums[left+1])
                 left++;
             while(left < right && nums[right] == nums[right-1])
@@ -1439,6 +1440,7 @@ public class LeetCodePraticeII {
                     right = mid - 1;
                 }
             }
+            //左边有序
             else {
                 if(target >= nums[left] && target < nums[mid]){
                     right = mid - 1;
