@@ -1452,4 +1452,99 @@ public class LeetCodePraticeII {
         }
         return false;
     }
+
+    //82 删除链表中的重复元素 快慢指针
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head == null || head.next ==null)
+            return head;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode fast = dummy.next;
+        ListNode slow = dummy;
+        while(fast != null){
+            if(fast.next!=null && fast.val == fast.next.val) {
+                while (fast.next != null && fast.val == fast.next.val)
+                    fast = fast.next;
+                slow.next = fast.next;
+                fast = fast.next;
+            }
+            else {
+                fast = fast.next;
+                slow = slow.next;
+            }
+        }
+        return dummy.next;
+    }
+
+
+    //83
+    public ListNode deleteDuplicatesII(ListNode head) {
+        if(head==null||head.next==null)
+            return head;
+        ListNode res = new ListNode(0);
+        res.next = head;
+        ListNode slow = res;
+        ListNode fast = res.next;
+        while(fast!=null&&fast.next!=null){
+            if(fast.val == fast.next.val){
+                while(fast.next != null&&fast.val == fast.next.val){
+                    fast = fast.next;
+                }
+            }
+            slow.next = fast;
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return res.next;
+    }
+    public ListNode deleteDuplicatesIII(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+        ListNode cur = head;
+        while(cur!=null&&cur.next!=null){
+            if(cur.val == cur.next.val){
+                cur.next = cur.next.next;
+            }
+            else {
+                cur = cur.next;
+            }
+        }
+        return head;
+    }
+
+    //84
+    public int largestRectangleArea(int[] heights) {
+        int res = 0;
+        Stack<Integer> stack = new Stack<>();
+        int[] nums = new int[heights.length+1];
+        for(int i=0;i<heights.length;i++){
+            nums[i] = heights[i];
+        }
+        nums[nums.length-1] = 0;
+        for(int i=0;i<nums.length;i++){
+            while(!stack.isEmpty()&&nums[i]<nums[stack.peek()]){
+                int top = stack.pop();
+                res = Math.max(res,nums[top]*(stack.isEmpty()?i:(i- stack.peek()-1)));
+            }
+            stack.push(i);
+        }
+        return res;
+    }
+
+    public int largestRectangleAreaII(int[] heights) {
+        int res = 0;
+        for(int i=0;i<heights.length;i++){
+            int mid = i;
+            int width = 0;
+            for(int j=i-1;j>=0&&heights[j]>=heights[i];j--){
+                width++;
+            }
+            for(int j=i+1;j<heights.length&&heights[j]>=heights[i];j++){
+                width++;
+            }
+            res = Math.max(res,heights[i]*(width+1));
+        }
+        return res;
+    }
+
 }
