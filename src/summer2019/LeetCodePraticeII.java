@@ -1374,10 +1374,7 @@ public class LeetCodePraticeII {
         return f1;
     }
 
-    public static void main(String[] args) {
-        new LeetCodePraticeII().removeDuplicatesII(new int[]{1,1,1,2,2,3});
-    }
-    //80
+      //80
     public int removeDuplicatesII(int[] nums) {
         if(nums.length==1||nums.length==0)
             return nums.length;
@@ -1543,6 +1540,190 @@ public class LeetCodePraticeII {
                 width++;
             }
             res = Math.max(res,heights[i]*(width+1));
+        }
+        return res;
+    }
+    
+    //86 在两个链表合并的时候 需要将大于的链表尾 避免大链表尾连接到小链表尾部造成环
+    public ListNode partition(ListNode head, int x) {
+        ListNode dummy1 = new ListNode(0);
+        ListNode dummy2 = new ListNode(0);
+        ListNode less = dummy1;
+        ListNode large = dummy2;
+        while(head!=null){
+            if(head.val<x){
+                less.next = head;
+                head = head.next;
+                less = less.next;
+            }
+            else {
+                large.next = head;
+                head = head.next;
+                large = large.next;
+            }
+        }
+
+
+        large.next = null;
+
+
+        less.next = dummy2.next;
+        return dummy1.next;
+    }
+
+
+    //88
+    public void merge(int[] nums1, int m, int[] nums2, int n) {
+        int last = m+n-1;
+        while(n>=0){
+            if(nums1[m-1]>nums2[n-1]){
+                nums1[last] = nums1[m-1];
+                m--;
+            }
+            else {
+                nums1[last] = nums2[n-1];
+                n--;
+            }
+        }
+    }
+
+    public void mergeII(int[] nums1, int m, int[] nums2, int n) {
+        int last = m-- + n-- -1;
+        while(m>=0&&n>=0){
+            if(nums1[m] > nums2[n]){
+                nums1[last] = nums1[m];
+                m--;
+            }
+            else {
+                nums1[last] = nums2[n];
+                n--;
+            }
+            last--;
+        }
+        while(n>=0){
+            nums1[last] = nums2[n];
+            last--;
+            n--;
+        }
+    }
+
+    public static void main(String[] args) {
+        new LeetCodePraticeII().grayCode(2).forEach(System.out::println);
+    }
+
+    //89 底下版本为错误版本
+    public List<Integer> grayCode(int n) {
+        List<Integer> res = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
+        List<String> temp = new ArrayList<>();
+        for(int i=0;i<n;i++)
+            sb.append("0");
+        temp.add(sb.toString());
+        while(true){
+            boolean flag1 = true;
+            boolean flag2 = true;
+            for(int i=n-1;i>=0;i--){
+                if(sb.charAt(i) == '0'){
+                    sb.setCharAt(i,'1');
+                    if(!temp.contains(sb.toString())){
+                        temp.add(sb.toString());
+                        flag1 = false;
+                        continue;
+                    }
+                }
+                else {
+                    sb.setCharAt(i,'0');
+                    if(!temp.contains(sb.toString())){
+                        temp.add(sb.toString());
+                        flag2 = false;
+                        continue;
+                    }
+                }
+            }
+            if(flag1&&flag2)
+                break;
+        }
+
+        for(int i=0;i<temp.size();i++)
+            res.add(transfer(temp.get(i)));
+        return res;
+    }
+
+    private int transfer(String s){
+        int exp = 1;
+        int res= 0;
+        for(int i=s.length()-1;i>=0;i--){
+            res += exp * (s.charAt(i)-'0');
+            exp = exp<<1;
+        }
+        return res;
+    }
+
+    public List<Integer> grayCodeII(int n) {
+        List<Integer> res = new ArrayList<>();
+        for(int i=0;i<1<<n;i++){
+            res.add(i^(i>>1));
+        }
+        return res;
+    }
+
+    //90
+    /**
+     * 这个题目的解题思想是这样的。由于nums内的元素存在重复，那么我们必然需要
+     * 考虑如果元素重复了，怎么去处理这个元素。最直观的想法是说比如我碰到了
+     * nums[i] == nums[i-1]表示当前元素我处理过了，拿题目中的数组举例子
+     * nums:[1,2,2]  i=2的时候就满足上式，那么我们可以认为这个元素已经处理过了
+     * 就直接跳过吗？ 显然不能 因为如果直接跳过我们就会漏掉[2,2] 和 [1,2,2]
+     * 这两个组合。那么说明我们必须找出某种方式，将部分重复的元素去除。
+     *
+     * 我们仔细思考一下nums[1,2,2] 当i=0的时候由于我们用于存储所有已知集合的
+     * retList只含有一个[]元素，那么不存在重复问题，我们经过这一步可以得到
+     * retList: [] [1] 来到2的时候我们在看 由于也不存在重复我们的2可以和
+     * 之前的retlist中的元素全组合一遍得到retList:[] [1] [2] [1,2]
+     * 等i=2来到这个重复的2的时候，我们发现他和前面的元素重复了，那么如果我们
+     * 先不考虑重复的问题重复会得到[] [1] [2] [1,2] [2] [1,2] [2,2] [1,2,2]
+     * 我们发现[2] [1,2]这部分是重复的部分是需要被踢出的部分 那么我们的目标现在
+     * 就转变成了如何鉴别出引起重复的这一部分，然后在组合的时候跳过他们。我们回忆一下
+     * 重复的这个[2] [1,2]来源于 2 这个元素和 [] [1] 组合导致的，因为在这个重复的
+     * 2之前，已经有一个2和[] [1]发生过组合，所以这里再去组合 必然发生重复现象。
+     * 那实际上这个第二次出现的2，只应该和[2] [1,2]发生组合。在这个例子中[2] [1,2]
+     * 是两个组合，很容易看出来，但是我们需要一个值，来表示说出现重复时我到底该匹配的值
+     * 有多少个？ 这个值就是上一次没有出现重复元素时，retList的长度。这么说太抽象了
+     * 我们举个例子 假设我们来到了[] [1] 现在2要和他们进行组合 此时2和1不相同，那么
+     * 他应该和整个retList进行组合 需要进行组合的元素数为2.那么当 来到第二个2时，此时
+     * retList中有四个元素[] [1] [2] [1,2] 按照刚才我们说的他只可以组合两个元素，
+     * 否则必然引起重复，而且是从后往前数两个元素（这个方向是因为，新的组合总是添加在数组的
+     * 尾巴上），如果照我们说的 他只应该和[2],[1,2]发生组合最后的出[] [1] [2] [1,2] [2,2] [1,2,2].
+     *
+     * 接下来说点别的，为什么第二个重复元素只能去和倒数的 上一次没有出现重复元素时，retList的长度个
+     * 元素进行组合？
+     *
+     * 原因是这样的，比如当nums[i] != num[i-1]时，此时nums[i]需要和retList中所有元素进行组合
+     * 该过程完成后retList的大小会由原大小m 变化为2m。当我们继续往后走时，当前nums[i] == nums[i-1]
+     * 我们直到我们当前的nums[i]只应该和之前的nums[i-1]没处理过的部分，或者之前的nums[i-1]在上一次
+     * 组合中新生成的部分进行组合（否则必然造成重复），那这个新生成部分的大小是多少呢？答案是m，因为再不重复时
+     * 每一次的组合结束大小都会变为原来的1倍，一半是之前的值，一半是新生成的值，而这个m就是上一次没有出现重复元素时，retList的长度。
+     *
+     * 以此类推 当我们的nums[1,2,2,2] 当i=3时，这个时候他还是只需要和上一次retList的最后m个元素进行组合
+     *
+     *
+     *
+     * m: 下一次要从已存在集合里面拿出来的集合数目
+     */
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> res = new ArrayList<>();
+        res.add(new ArrayList<>());
+        int m = 1;
+        for(int i=0;i<nums.length;i++){
+            int size = res.size();
+            if(i==0 || nums[i] != nums[i-1])
+                m = size;
+            for(int j=size-1;j>=size-m;j--){
+                List<Integer> temp = new ArrayList<>(res.get(j));
+                temp.add(nums[i]);
+                res.add(temp);
+            }
         }
         return res;
     }
