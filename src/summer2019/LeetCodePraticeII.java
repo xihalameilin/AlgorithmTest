@@ -1,5 +1,7 @@
 package summer2019;
 
+import jdk.nashorn.api.tree.Tree;
+
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -1607,9 +1609,6 @@ public class LeetCodePraticeII {
         }
     }
 
-    public static void main(String[] args) {
-        new LeetCodePraticeII().grayCode(2).forEach(System.out::println);
-    }
 
     //89 底下版本为错误版本
     public List<Integer> grayCode(int n) {
@@ -1728,4 +1727,542 @@ public class LeetCodePraticeII {
         return res;
     }
 
+
+    //91
+    public int numDecodings(String s) {
+        if(s.length()==0||s.charAt(0)=='0')
+            return 0;
+        int[] dp = new int[s.length()+1];
+        dp[0] = 1;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='0')
+                dp[i+1]=0;
+            else
+                dp[i+1]=dp[i];
+            if(i>0 && (s.charAt(i-1)=='1'||(s.charAt(i-1)=='2'&&s.charAt(i)<'7')))
+                dp[i+1] += dp[i-1];
+        }
+        return dp[dp.length-1];
+    }
+
+    private void help91(String s,int index,Integer res){
+        if(index == s.length()-1){
+                res++;
+                return;
+        }
+        else if(index == s.length()-2){
+            char c1 = s.charAt(index);
+            char c2 = s.charAt(index+1);
+            if(c1 > '2'){
+                res++;
+                return;
+            }
+            else {
+                if(c1 == '2' && c2 > '6'){
+                    res++;
+                    return;
+                }
+                else{
+                    res = res + 2;
+                    return;
+                }
+            }
+        }
+
+        char c = s.charAt(index);
+        if(c > '2'){
+            help91(s,index+1,res);
+        }
+        else {
+            char c2 = s.charAt(index+1);
+            if(c == '2' && c2 > '6'){
+                help91(s,index+1,res);
+            }
+            else {
+                help91(s,index+1,res);
+                help91(s,index+2,res);
+            }
+        }
+    }
+
+    //92
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode pre = dummy;
+        for(int i=1;i<m;i++){
+            pre = pre.next;
+        }
+        ListNode newbegin = pre;
+        ListNode newend = pre.next;
+        pre = pre.next;
+        ListNode mid = pre.next;
+        pre.next = null;
+        for(int i=0;i<n-m;i++){
+            ListNode temp = mid.next;
+            mid.next = pre;
+            pre = mid;
+            mid = temp;
+        }
+        newbegin.next = pre;
+        newend.next = mid;
+        return dummy.next;
+    }
+
+
+    public static void main(String[] args) {
+        new LeetCodePraticeII().restoreIpAddresses("0000").forEach(System.out::println);
+    }
+    //93
+    public List<String> restoreIpAddresses(String s) {
+        List<String> res = new ArrayList<>();
+        help93(res,s,new StringBuilder(),0,0);
+        return res;
+    }
+
+    private void help93(List<String> res,String s,StringBuilder temp,int begin,int times){
+        if(times==4){
+            if(begin == s.length())
+                res.add(temp.toString().substring(0,temp.length()-1));
+            return;
+        }
+        for(int i=1;i<=3&&begin+i-1<s.length();i++){
+            String value = s.substring(begin,begin+i);
+            int length = temp.length();
+            if(Integer.valueOf(value)<=255) {
+                temp.append(value);
+                temp.append(".");
+                help93(res, s, temp, begin + i, times + 1);
+                temp.delete(length,temp.length());
+                if(s.charAt(begin)=='0')
+                    break;
+            }
+        }
+    }
+
+          public class TreeNode {
+          int val;
+          TreeNode left;
+          TreeNode right;
+          TreeNode(int x) { val = x; }
+      }
+
+    //94
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode cur = root;
+        while(cur!=null||!stack.isEmpty()){
+            if(cur!=null){
+                stack.push(cur);
+                cur = cur.left;
+            }
+            else {
+                cur = stack.pop();
+                res.add(cur.val);
+                cur = cur.right;
+            }
+        }
+        return res;
+    }
+
+    //95
+    public List<TreeNode> generateTrees(int n) {
+        if (n == 0) {
+            return new LinkedList<TreeNode>();
+        }
+        return generateTrees(1, n);
+    }
+
+    public List<TreeNode> generateTrees(int start, int end) {
+        List<TreeNode> allTrees = new LinkedList<TreeNode>();
+        if (start > end) {
+            allTrees.add(null);
+            return allTrees;
+        }
+
+        // 枚举可行根节点
+        for (int i = start; i <= end; i++) {
+            // 获得所有可行的左子树集合
+            List<TreeNode> leftTrees = generateTrees(start, i - 1);
+
+            // 获得所有可行的右子树集合
+            List<TreeNode> rightTrees = generateTrees(i + 1, end);
+
+            // 从左子树集合中选出一棵左子树，从右子树集合中选出一棵右子树，拼接到根节点上
+            for (TreeNode left : leftTrees) {
+                for (TreeNode right : rightTrees) {
+                    TreeNode currTree = new TreeNode(i);
+                    currTree.left = left;
+                    currTree.right = right;
+                    allTrees.add(currTree);
+                }
+            }
+        }
+        return allTrees;
+    }
+
+    //96
+    public int numTrees(int n) {
+        if(n<=2)
+            return  n;
+        int[] dp = new int[n+1];
+        dp[0] = 1;
+        dp[1] = 1;
+        for(int i=2;i<n+1;i++){
+            for(int j=0;j<=i-1;j++){
+                dp[i] += dp[j]*dp[i-1-j];
+            }
+        }
+        return dp[n];
+    }
+
+    //97
+
+    /**
+     *  检验一个树是否为搜索树  中序遍历 是否为有序
+     */
+    public boolean isValidBST(TreeNode root) {
+        if(root==null)
+            return true;
+        List<Integer> res = new ArrayList<>();
+        inOrder(res,root);
+        for(int i=1;i<res.size();i++){
+            if(res.get(i)<=res.get(i-1))
+                return false;
+        }
+        return true;
+    }
+
+    private void inOrder(List<Integer> res,TreeNode root){
+        if(root!=null){
+            inOrder(res,root.left);
+            res.add(root.val);
+            inOrder(res,root.right);
+        }
+    }
+
+    //100
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if(p==null&&q==null){
+            return true;
+        }
+
+        if(p!=null && q!=null && p.val==q.val){
+            return isSameTree(p.left,q.left)&&isSameTree(p.right,q.right);
+        }
+        else {
+            return false;
+        }
+    }
+
+    //101
+    public boolean isSymmetric(TreeNode root) {
+        if(root==null)
+            return true;
+        return help101(root.left,root.right);
+    }
+
+    private boolean help101(TreeNode left,TreeNode right){
+        if(left==null&&right==null)
+            return true;
+        else if(left!=null&&right!=null&&left.val==right.val)
+            return help101(left.left,right.right)&&help101(left.right,right.left);
+        return false;
+
+    }
+
+
+    //102
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        if(root==null)
+            return new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> nextqueue = new LinkedList<>();
+        List<List<Integer>> res = new ArrayList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            List<Integer> temp = new ArrayList<>();
+            int size = queue.size();
+            for(int i=0;i<size;i++) {
+                TreeNode treeNode = queue.poll();
+                temp.add(treeNode.val);
+                if (treeNode.left != null)
+                    nextqueue.offer(treeNode.left);
+                if (treeNode.right != null)
+                    nextqueue.offer(treeNode.right);
+            }
+            res.add(temp);
+            queue = nextqueue;
+        }
+        return res;
+    }
+
+    //103
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        if(root==null)
+            return new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        List<List<Integer>> res = new ArrayList<>();
+        queue.offer(root);
+        boolean flag = false;
+        while(!queue.isEmpty()){
+            List<Integer> temp = new ArrayList<>();
+            int size = queue.size();
+            for(int i=0;i<size;i++) {
+                TreeNode treeNode = queue.poll();
+                temp.add(treeNode.val);
+                if (treeNode.left != null)
+                    queue.offer(treeNode.left);
+                if (treeNode.right != null)
+                    queue.offer(treeNode.right);
+            }
+            if(flag) {
+                List<Integer> temp2 = new ArrayList<>();
+                for(int i=temp.size()-1;i>=0;i++){
+                    temp2.add(temp.get(i));
+                }
+                res.add(temp2);
+            }
+            else {
+                res.add(temp);
+            }
+            flag = !flag;
+        }
+        return res;
+    }
+
+
+    //104 dfs
+    int res = 0;
+    public int maxDepth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        help104(root,1);
+        return res;
+    }
+
+    private void help104(TreeNode root,int temp){
+        if(root==null){
+            return ;
+        }
+        res = Math.max(res,temp);
+        help104(root.left,temp+1);
+        help104(root.right,temp+1);
+
+    }
+
+    //bfs
+    public int maxDepthII(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = maxDepthII(root.left);
+        int right = maxDepthII(root.right);
+        return Math.max(left, right) + 1;
+    }
+
+    public int maxDepthIII(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int level = 0;
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            level++;
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.remove();
+                if (node.left != null) queue.add(node.left);
+                if (node.right != null) queue.add(node.right);
+            }
+        }
+        return level;
+    }
+
+
+    //107
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        if(root==null)
+            return new ArrayList<>();
+        List<List<Integer>> res = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            List<Integer> temp = new ArrayList<>();
+            for(int i=0;i<size;i++){
+                TreeNode treeNode = queue.poll();
+                temp.add(treeNode.val);
+                if(treeNode.left!=null)
+                    queue.offer(treeNode.left);
+                if(treeNode.right!=null)
+                    queue.offer(treeNode.right);
+            }
+            res.add(temp);
+        }
+        List<List<Integer>> last = new ArrayList<>();
+        for(int i=res.size()-1;i>=0;i--){
+            last.add(res.get(i));
+        }
+        return last;
+    }
+
+
+    //108
+    public TreeNode sortedArrayToBST(int[] nums) {
+        return help108(nums,0,nums.length-1);
+    }
+
+    private TreeNode help108(int[] nums,int left,int right){
+        if(left>right)
+            return null;
+        if(left==right)
+            return new TreeNode(nums[left]);
+        int mid = left + (right - left)/2;
+        TreeNode root = new TreeNode(nums[mid]);
+        root.left = help108(nums,left,mid-1);
+        root.right = help108(nums,mid+1,right);
+        return root;
+    }
+
+
+    //109
+    public TreeNode sortedListToBST(ListNode head) {
+        ListNode left = head;
+        if(left==null)
+            return null;
+        ListNode mid = head.next;
+        if(mid == null)
+            return new TreeNode(head.val);
+        ListNode right = head.next.next;
+        while(right!=null&&right.next!=null){
+            left = left.next;
+            mid = mid.next;
+            right = right.next.next;
+        }
+        left.next=null;
+        TreeNode root = new TreeNode(mid.val);
+        root.left = sortedListToBST(head);
+        root.right = sortedListToBST(mid.next);
+        return root;
+    }
+
+    //110
+    public boolean isBalanced(TreeNode root) {
+        if(root==null)
+            return true;
+        if(Math.abs(help110(root.left)-help110(root.right))>1)
+            return false;
+        return isBalanced(root.left)&&isBalanced(root.right);
+
+    }
+
+    private int help110(TreeNode root){
+        if(root==null)
+            return 0;
+        int left = help110(root.left);
+        int right = help110(root.right);
+        return Math.max(left,right)+1;
+    }
+
+
+    //111
+    public int minDepth(TreeNode root) {
+        if(root==null)
+            return 0;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        int standard = 1;
+        int res = 0;
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            res++;
+            for(int i=0;i<size;i++){
+                TreeNode treeNode = queue.poll();
+                if(treeNode.left==null&&treeNode.right==null)
+                    return res;
+                if(treeNode.left!=null)
+                    queue.offer(treeNode.left);
+                if(treeNode.right!=null)
+                    queue.offer(treeNode.right);
+            }
+            standard = standard*2;
+        }
+        return res;
+    }
+
+    public int minDepthII(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        if (root.left == null && root.right != null) {
+            return minDepth(root.right) + 1;
+        }
+
+        if (root.right == null && root.left != null) {
+            return minDepth(root.left) + 1;
+        }
+        return Math.min(minDepth(root.left), minDepth(root.right)) + 1;
+    }
+
+    //112
+    public boolean hasPathSum(TreeNode root, int sum) {
+        if(root==null)
+            return false;
+        return help112(root,sum);
+    }
+
+    private boolean help112(TreeNode root,int left){
+        if(root==null)
+            return false;
+        if(root.val==left&&root.left==null&&root.right==null)
+            return true;
+        return help112(root.left,left-root.val)||help112(root.right,left-root.val);
+    }
+
+    //113
+    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> temp = new ArrayList<>();
+        help113(res,temp,root,sum);
+        return res;
+    }
+
+    private void help113(List<List<Integer>> res,List<Integer> temp,TreeNode root,int sum){
+        if(root==null)
+            return;
+        temp.add(root.val);
+        if(root.left==null&&root.right==null){
+            if(sum == root.val){
+                res.add(new ArrayList<>(temp));
+            }
+        }
+        help113(res,temp,root.left,sum-root.val);
+        help113(res,temp,root.right,sum-root.val);
+        temp.remove(temp.size()-1);
+    }
+
+    //115 动态规划求子序列个数
+    public int numDistinct(String s, String t) {
+        int ilen = t.length();
+        int jlength = s.length();
+        int[][] dp = new int[ilen+1][jlength+1];
+        for(int i=0;i<=jlength;i++){
+            dp[0][i] = 1;
+        }
+        for(int i=1;i<=ilen;i++){
+            for(int j=1;j<=jlength;j++){
+                if(s.charAt(j-1) == t.charAt(i-1)){
+                    dp[i][j] = dp[i-1][j-1]+dp[i][j-1];
+                }
+                else
+                    dp[i][j] = dp[i][j-1];
+            }
+        }
+        return dp[ilen][jlength];
+    }
 }
