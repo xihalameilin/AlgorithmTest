@@ -1810,9 +1810,6 @@ public class LeetCodePraticeII {
     }
 
 
-    public static void main(String[] args) {
-        new LeetCodePraticeII().restoreIpAddresses("0000").forEach(System.out::println);
-    }
     //93
     public List<String> restoreIpAddresses(String s) {
         List<String> res = new ArrayList<>();
@@ -2264,5 +2261,156 @@ public class LeetCodePraticeII {
             }
         }
         return dp[ilen][jlength];
+    }
+
+    class Node {
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+
+        public Node() {}
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _left, Node _right, Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
+    };
+
+    //116
+    public Node connect(Node root) {
+        if(root==null)
+            return null;
+        if(root.left!=null){
+            root.left.next = root.right;
+        }
+        if(root.right!=null&&root.next!=null){
+            root.right.next = root.next.left;
+        }
+        connect(root.left);
+        connect(root.right);
+        return root;
+    }
+
+    //117
+    public Node connectII(Node root) {
+        if(root==null) return root;
+        if(root.left!=null && root.right!=null){
+            root.left.next=root.right;
+        }
+        if(root.left!=null && root.right==null){
+            root.left.next=getNext(root.next);
+        }
+        if(root.right!=null)
+            root.right.next=getNext(root.next);
+        connect(root.right);
+        connect(root.left);
+        return root;
+    }
+
+    public Node getNext(Node root){
+        if(root==null) return null;
+        if(root.left!=null) return root.left;
+        if(root.right!=null) return root.right;
+        if(root.next!=null) return getNext(root.next);
+        return null;
+    }
+
+
+    //118
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> temp = new ArrayList<>();
+        temp.add(1);
+        res.add(temp);
+        if(numRows == 0)
+            return new ArrayList<>();
+        if(numRows == 1)
+            return res;
+        for(int i=1;i<numRows;i++){
+            int size = temp.size();
+            List<Integer> list = new ArrayList<>();
+            list.add(1);
+            for(int j=1;j<size;j++){
+                list.add(temp.get(j-1)+temp.get(j));
+            }
+            list.add(1);
+            res.add(list);
+            temp = list;
+        }
+        return res;
+    }
+
+
+    //119
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> temp = new ArrayList<>();
+        temp.add(1);
+        if(rowIndex == 0)
+            return temp;
+        for(int i=1;i<=rowIndex;i++){
+            int size = temp.size();
+            List<Integer> list = new ArrayList<>();
+            list.add(1);
+            for(int j=1;j<size;j++){
+                list.add(temp.get(j-1)+temp.get(j));
+            }
+            list.add(1);
+            temp = list;
+        }
+        return temp;
+    }
+
+    //120
+    public int minimumTotal(List<List<Integer>> triangle) {
+        int size = triangle.size();//三角形的行数
+        if(size == 0)
+            return 0;
+        int[] dp = new int[size];
+        int[] dp2 = new int[size];
+        dp[0] = triangle.get(0).get(0);
+        dp2[0] = triangle.get(0).get(0);
+        int col = 2;
+        for(int i=1;i<size;i++){
+            for(int j=0;j<col;j++) {
+                int index1 = j - 1 >= 0 ? j - 1 : 0;
+                int index2 = j==i?i-1:j;
+                dp2[j] = triangle.get(i).get(j) + Math.min(dp[index1], dp[index2]);
+            }
+            for(int n=0;n<col;n++){
+                dp[n] = dp2[n];
+            }
+            col++;
+        }
+        int res = dp[0];
+        for(int i=0;i<size;i++){
+            if(res>dp[i])
+                res = dp[i];
+        }
+        return res;
+    }
+
+    //从下面往上面算 初始化多一个便于给最后一层初始化 不需要单独考虑越界
+    public int minimumTotalII(List<List<Integer>> triangle) {
+        if (triangle == null || triangle.size() == 0) {
+            return 0;
+        }
+        // 只需要记录每一层的最小值即可
+        int[] dp = new int[triangle.size() + 1];
+
+        for (int i = triangle.size() - 1; i >= 0; i--) {
+            List<Integer> curTr = triangle.get(i);
+            for (int j = 0; j < curTr.size(); j++) {
+                //这里的dp[j] 使用的时候默认是上一层的，赋值之后变成当前层
+                dp[j] = Math.min(dp[j], dp[j + 1]) + curTr.get(j);
+            }
+        }
+        return dp[0];
     }
 }
