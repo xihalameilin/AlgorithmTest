@@ -2413,4 +2413,85 @@ public class LeetCodePraticeII {
         }
         return dp[0];
     }
+
+    //121  最佳没股票时机
+    public int maxProfit(int[] prices) {
+        if(prices.length<=1)
+            return 0;
+        int max = 0;
+        int min = prices[0];
+        for(int i=1;i<prices.length;i++){
+            max = Math.max(max,prices[i] - min);
+            min = Math.min(min,prices[i]);
+        }
+        return max;
+    }
+
+    //122 多次卖股票 贪心算法 后一天比前一天大就买卖
+    public int maxProfitII(int[] prices) {
+        int res = 0;
+        if(prices.length<=1)
+            return 0;
+        for(int i=0;i<prices.length-1;i++){
+            if(prices[i+1]>prices[i])
+                res += (prices[i+1]-prices[i]);
+        }
+        return res;
+    }
+
+    //123
+    public int maxProfitIII(int[] prices) {
+        int firstbuy = Integer.MIN_VALUE;
+        int firstsell = 0;
+        int secbuy = Integer.MIN_VALUE;
+        int secsell = 0;
+        for(int p:prices){
+            firstbuy = Math.max(firstbuy,-p);
+            firstsell = Math.max(firstsell,p+firstbuy);
+            secbuy = Math.max(secbuy,firstsell-p);
+            secsell = Math.max(secsell,secbuy+p);
+        }
+        return secsell;
+    }
+
+
+    //124 二叉树最大路径和
+    private int max = Integer.MIN_VALUE;
+    public int maxPathSum(TreeNode root) {
+        dfs(root);
+        return max;
+    }
+    public int dfs(TreeNode root) {
+        //返回当前子树的最大值
+        if (root == null) return 0;
+        int left = dfs(root.left);
+        int right = dfs(root.right);
+        //当前节点为n,对于当前节点来说，最大值可以为n+left,n+right,n,n+left+right
+        //上面四项中的一个，但是返回是不能返回第四个的，那种路径是不成立的
+        int p = Math.max(root.val,Math.max(root.val+left,root.val+right));
+        max = Math.max(max,p);
+        int p2 = Math.max(p,root.val+left+right);
+        max = Math.max(max,p2);
+        return p;
+    }
+
+    //125
+    public boolean isPalindrome(String s) {
+        if(s==null)
+            return true;
+        StringBuilder sb = new StringBuilder();
+        s = s.toLowerCase();
+        for(int i=0;i<s.length();i++){
+            if((s.charAt(i)>='a'&&s.charAt(i)<='z')||(s.charAt(i)>='0'&&s.charAt(i)<='9'))
+                sb.append(s.charAt(i));
+        }
+        s = sb.toString();
+        for(int i=0;i<s.length()/2;i++){
+            if(s.charAt(i) != s.charAt(s.length()-1-i))
+                return false;
+        }
+        return true;
+    }
+
+
 }
