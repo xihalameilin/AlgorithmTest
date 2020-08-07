@@ -2495,4 +2495,97 @@ public class LeetCodePraticeII {
     }
 
 
+    //126  此题目前感觉还是解决不了
+    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+        List<List<String>> res = new ArrayList<>();
+        List<String> temp = new ArrayList<>();
+        temp.add(beginWord);
+        boolean[] marked = new boolean[wordList.size()];
+        help126(res,temp,wordList,beginWord,endWord,marked);
+        if(res.size()==0)
+            return new ArrayList<>();
+        int minlength = res.get(0).size();
+        List<List<String>> ans = new ArrayList<>();
+        for(int i=0;i<res.size();i++){
+            List<String> t = res.get(i);
+            if(t.size()<minlength){
+                minlength = t.size();
+                ans.clear();
+            }
+            if(t.size()==minlength){
+                ans.add(t);
+            }
+        }
+        return ans;
+    }
+
+    private void help126(List<List<String>> res,List<String> temp,List<String> wordList,String cur,String e,boolean[] marked){
+        if(cur.equals(e)) {
+            res.add(new ArrayList<>(temp));
+            return;
+        }
+        for(int i=0;i<wordList.size();i++){
+            if(marked[i])
+                continue;
+            String dic = wordList.get(i);
+            if(canTransfer(cur,dic)){
+                temp.add(dic);
+                marked[i] = true;
+                help126(res,temp,wordList,dic,e,marked);
+                marked[i] = false;
+                temp.remove(temp.size()-1);
+            }
+        }
+    }
+
+    //127
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Queue<String> queue = new LinkedList<>();
+        queue.add(beginWord);
+        boolean[] marked = new boolean[wordList.size()];
+        int layer = 1;
+        while(!queue.isEmpty()){
+            layer++;
+            int size = queue.size();
+            while(size-->0){
+                String cur = queue.poll();
+                for(int i=0;i<wordList.size();i++){
+                    if(marked[i])
+                        continue;
+                    String dic = wordList.get(i);
+                    if(canTransfer(cur,dic)){
+                        if(dic.equals(endWord))
+                            return layer;
+                        queue.add(dic);
+                        marked[i] = true;
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+
+    private boolean canTransfer(String a,String b){
+        int diff = 0;
+        for(int i=0;i<a.length();i++){
+            if(a.charAt(i)!=b.charAt(i))
+                diff++;
+        }
+        return diff==1;
+    }
+
+
+    //128 (n) 复杂度找到最长子序列长度
+    public int longestConsecutive(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for(int i:nums){
+            set.add(i);
+        }
+        int res = 0;
+        for(int i=0;i<nums.length;i++){
+
+        }
+    }
+
+
 }
