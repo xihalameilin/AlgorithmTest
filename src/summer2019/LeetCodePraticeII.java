@@ -1837,7 +1837,7 @@ public class LeetCodePraticeII {
         }
     }
 
-          public class TreeNode {
+          public   class TreeNode {
           int val;
           TreeNode left;
           TreeNode right;
@@ -2583,9 +2583,377 @@ public class LeetCodePraticeII {
         }
         int res = 0;
         for(int i=0;i<nums.length;i++){
+            int temp = nums[i];
+            if(!set.contains(temp-1)) {
+                int count = 0;
+                while (set.contains(temp)) {
+                    temp++;
+                    count++;
+                }
+                if (count > res)
+                    res = count;
+            }
+        }
+        return res;
+    }
 
+
+    //129
+    static int sum = 0;
+    public int sumNumbers(TreeNode root) {
+        sum = 0;
+        help129(0,root);
+        return sum;
+    }
+
+    private static void help129(int val,TreeNode root){
+        if(root==null)
+            return;
+        int k = 10*val+root.val;
+        if(root.left==null&&root.right==null){
+            sum +=k;
+            return;
+        }
+        help129(k,root.left);
+        help129(k,root.right);
+    }
+
+    //130 找出x包围的o  最后还是o的点就是与边界相连的点 dfs
+    public void solve(char[][] board) {
+        if(board==null||board.length==0)
+            return;
+        int row = board.length;
+        int col = board[0].length;
+        for(int i=0;i<col;i++){
+            help130(board,0,i);
+            help130(board,row-1,i);
+        }
+        for(int i=0;i<row;i++){
+            help130(board,i,0);
+            help130(board,i,col-1);
+        }
+
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                if(board[i][j]=='O')
+                    board[i][j] = 'X';
+                if(board[i][j]=='1')
+                    board[i][j] = 'O';
+            }
         }
     }
 
+    private void help130(char[][] board,int x,int y){
+        int row = board.length;
+        int col = board[0].length;
+        if(x<0||x>=row||y<0||y>=col||board[x][y]!='O')
+            return;
+        board[x][y] = '1';
+        help130(board,x-1,y);
+        help130(board,x+1,y);
+        help130(board,x,y-1);
+        help130(board,x,y+1);
+    }
+
+    //131
+    public List<List<String>> partition(String s) {
+        List<List<String>> res = new ArrayList<>();
+        List<String> temp = new ArrayList<>();
+        help131(res,temp,s,0);
+        return res;
+    }
+
+    private void help131(List<List<String>> res,List<String> temp,String s,int begin){
+        if(begin==s.length()){
+            res.add(new ArrayList<>(temp));
+            return;
+        }
+        for(int i=1;i<=s.length()-begin;i++){
+            String t = s.substring(begin,begin+i);
+            if(isHuiWen(t)){
+                temp.add(t);
+                help131(res,temp,s,begin+i);
+                temp.remove(temp.size()-1);
+            }
+        }
+    }
+
+
+    private boolean isHuiWen(String s){
+        int length = s.length();
+        for(int i=0;i<length/2;i++){
+            if(s.charAt(i)!=s.charAt(length-1-i))
+                return false;
+        }
+        return true;
+    }
+
+
+    public static void main(String[] args) {
+        LeetCodePraticeII leetCodePraticeII = new LeetCodePraticeII();
+        leetCodePraticeII.minCut("aab");
+    }
+
+
+    //132
+    public int minCut(String s) {
+        int[] dp = new int[s.length()];
+        //初始化？
+
+        for(int i=0;i<dp.length;i++){
+            dp[i] = i;
+        }
+
+        for(int i=0;i<s.length();i++){
+            if(isHuiWen(s.substring(0,i+1))){
+                dp[i] = 0;
+                continue;
+            }
+            for(int j=0;j<=i;j++){
+                System.out.println(s.substring(j,i+1));
+                if(isHuiWen(s.substring(j,i+1))){
+                    dp[i] = Math.min(dp[i],dp[j-1]+1);
+                }
+            }
+        }
+        return dp[s.length()-1];
+    }
+
+
+    //134
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int size = gas.length;
+        List<Integer> list = new ArrayList<>();
+        for(int i=0;i<size;i++){
+            if(gas[i]>=cost[i])
+                list.add(i);
+        }
+        for(int i=0;i<list.size();i++){
+            int index = list.get(i);
+            int res = index;
+            int count = 0;
+            int left = 0;
+            boolean flag = false;
+            while(count<size){
+                count++;
+                left = left+gas[index]-cost[index];
+                if(left<0){
+                    flag = true;
+                    break;
+                }
+                index = (index+1)%size;
+            }
+            if(!flag){
+                return res;
+            }
+        }
+        return -1;
+
+    }
+
+    /**
+     *
+     *可以将两个数组 gasgas 和 costcost 看成一个数组，即 a[i]=gas[i]-cost[i]a[i]=gas[i]−cost[i]，从某点出发，统计 aa 的连续和 sumsum，当此时的 sum<0sum<0 时说明无法通行.
+     *
+     * 从每一个点出发，依次扫描复杂度是 O(n^2)O(n
+     * 2
+     *  )，可以进行如下优化.
+     *
+     * 假设结点总数为 nn，从结点 0 出发，sumsum 即为 aa 的前缀和，即 sum[i]=a[0]+a[1]+...a[i]sum[i]=a[0]+a[1]+...a[i].
+     *
+     * 求出 sumsum 的最小值，假设为 sum[i]sum[i]，如果此时的 sum[n-1]>=0sum[n−1]>=0 那么只需要从 i+1i+1 位置出发，一定是合法的.
+     *
+     * 反证法证明如下：
+     *
+     * 假设从 i+1i+1 出发，如果在 i+1i+1 的右边某个位置 jj 出现了无法通行的情况，即 sum[j]-sum[i]<0sum[j]−sum[i]<0，移项得 sum[j]<sum[i]sum[j]<sum[i]，这是不可能的，因为 sum[i]sum[i] 是最小值，前后矛盾.
+     *
+     * 如果在 i+1i+1 的左边某个位置 jj 出现了无法通行的情况（环形路线，经过位置 n-1n−1 后会来到位置 00），即 sum[n-1]-sum[i]+sum[j]<0sum[n−1]−sum[i]+sum[j]<0，移项得 (sum[j]-sum[i])+sum[n-1]<0(sum[j]−sum[i])+sum[n−1]<0，也是不可能的，因为假设中 sum[n-1]>=0sum[n−1]>=0 且 sum[i]sum[i] 是最小值，那么也一定有 sum[j]-sum[i]>=0sum[j]−sum[i]>=0 ，两个非负项相加一定还是非负的，前后矛盾.
+     *
+     * 优化之后的方法，只需要求出 sumsum 以及它的最小值下标，时间复杂度 O(n)O(n).
+     *
+     */
+    public int canCompleteCircuitII(int[] gas, int[] cost) {
+        int n=gas.length,sum=0,id=0,minsum=Integer.MAX_VALUE;
+        for(int i=0;i<n;++i){
+            sum+=gas[i]-cost[i];
+            if(sum<minsum){
+                id=i;
+                minsum=sum;
+            }
+        }
+        return sum>=0?(id+1)%n:-1;
+
+    }
+
+
+    //135
+    public int candy(int[] ratings) {
+        boolean flag = true;
+        int[] candies = new int[ratings.length];
+        Arrays.fill(candies,1);
+        while(flag){
+            flag = false;
+            for(int i=0;i<ratings.length;i++){
+                if(i<ratings.length-1&&ratings[i]>ratings[i+1]&&candies[i]<=candies[i+1]){
+                    candies[i] = candies[i+1]+1;
+                    flag = true;
+                }
+                if(i>0&&ratings[i]>ratings[i-1]&&candies[i]<=candies[i-1]){
+                    candies[i] = candies[i-1]+1;
+                    flag = true;
+                }
+            }
+        }
+        int res = 0;
+        for(Integer i:candies){
+            res += i;
+        }
+        return res;
+    }
+
+
+    public int candyII(int[] ratings) {
+        int sum = 0;
+        int[] left2right = new int[ratings.length];
+        int[] right2left = new int[ratings.length];
+        Arrays.fill(left2right, 1);
+        Arrays.fill(right2left, 1);
+        for (int i = 1; i < ratings.length; i++) {
+          if(ratings[i]>ratings[i-1])
+              left2right[i] = left2right[i-1]+1;
+        }
+        for (int i = ratings.length - 2; i >= 0; i--) {
+          if(ratings[i]>ratings[i+1]){
+              right2left[i] = right2left[i+1]+1;
+          }
+        }
+        for (int i = 0; i < ratings.length; i++) {
+            sum += Math.max(left2right[i], right2left[i]);
+        }
+        return sum;
+    }
+
+
+    //136
+    public int singleNumber(int[] nums) {
+        int size = nums.length;
+        int res = 0;
+        for(int i=0;i<size;i++){
+            res = res^nums[i];
+        }
+        return res;
+    }
+
+
+    //137
+    public int singleNumberII(int[] nums) {
+        Map<Integer,Integer> map =new HashMap<>();
+        for(int num:nums){
+            map.put(num,map.getOrDefault(num,0)+1);
+        }
+        for(int key:map.keySet()){
+            if(map.get(key) == 1)
+                return key;
+        }
+        return -1;
+    }
+
+
+    //138在上一个类中
+
+
+    //139  36/43
+    public boolean wordBreak(String s, List<String> wordDict) {
+        if(s==null)
+            return false;
+        return help139(wordDict,s,0);
+    }
+
+    private boolean help139(List<String> wordDict,String s,int begin){
+        if(begin==s.length())
+            return true;
+        boolean flag = false;
+        for(int i=begin;i<s.length();i++){
+            String temp = s.substring(begin,i+1);
+            System.out.println(temp);
+            if(wordDict.contains(temp)){
+                flag = flag||help139(wordDict,s,i+1);
+            }
+        }
+        return flag;
+    }
+
+
+    public boolean wordBreakIII(String s, List<String> wordDict) {
+        if(s==null)
+            return false;
+        boolean[] dp = new boolean[s.length()+1];
+        dp[0] = true;
+        for(int i=1;i<=s.length();i++){
+            for(int j=0;j<i;j++){
+                if(dp[j]&&wordDict.contains(s.substring(j,i))){
+                    dp[i] = true;
+                    break;
+                }
+
+            }
+        }
+        return dp[s.length()];
+    }
+
+
+    //140  31/36
+    public List<String> wordBreakII(String s, List<String> wordDict) {
+        List<List<String>> res = new ArrayList<>();
+        help140(res,new ArrayList<>(),s,wordDict,0);
+        List<String> ans = new ArrayList<>();
+        for(List<String> temp:res){
+            StringBuilder sb = new StringBuilder();
+            for(int i=0;i<temp.size();i++){
+                sb.append(temp.get(i)+" ");
+            }
+            ans.add(sb.toString().trim());
+        }
+        return ans;
+    }
+    public void help140(List<List<String>> res,List<String> temp,String s, List<String> wordDict,int begin) {
+        if(begin==s.length()){
+            res.add(new ArrayList<>(temp));
+            return;
+        }
+        for(int i=begin;i<s.length();i++){
+            String curstr = s.substring(begin,i+1);
+            if(wordDict.contains(curstr)){
+                temp.add(curstr);
+                help140(res,temp,s,wordDict,i+1);
+                temp.remove(temp.size()-1);
+            }
+        }
+    }
+
+    public List<String> wordBreak(String s, Set<String> wordDict) {
+        return word_Break(s, wordDict, 0);
+    }
+    HashMap<Integer, List<String>> map = new HashMap<>();
+
+    public List<String> word_Break(String s, Set<String> wordDict, int start) {
+        if (map.containsKey(start)) {
+            return map.get(start);
+        }
+        LinkedList<String> res = new LinkedList<>();
+        if (start == s.length()) {
+            res.add("");
+        }
+        for (int end = start + 1; end <= s.length(); end++) {
+            if (wordDict.contains(s.substring(start, end))) {
+                List<String> list = word_Break(s, wordDict, end);
+                for (String l : list) {
+                    res.add(s.substring(start, end) + (l.equals("") ? "" : " ") + l);
+                }
+            }
+        }
+        map.put(start, res);
+        return res;
+    }
 
 }
