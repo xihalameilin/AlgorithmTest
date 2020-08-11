@@ -2,6 +2,7 @@ package summer2019;
 
 import jdk.nashorn.api.tree.Tree;
 
+import javax.naming.InsufficientResourcesException;
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -2956,4 +2957,171 @@ public class LeetCodePraticeII {
         return res;
     }
 
+
+    //147
+    public ListNode insertionSortList(ListNode head) {
+        if(head==null)
+            return null;
+        ListNode dummy = new ListNode(Integer.MIN_VALUE);
+        ListNode cur = head;
+        dummy.next = cur;
+        cur = cur.next;
+        head.next = null;
+        while(cur!=null){
+            ListNode node = cur;
+            cur = node.next;
+            ListNode slow = dummy;
+            ListNode fast = dummy.next;
+            boolean flag = true;
+            while(fast!=null){
+                int temp = node.val;
+                if(temp>=slow.val&temp<=fast.val){
+                    slow.next = node;
+                    node.next = fast;
+                    flag = false;
+                    break;
+                }
+                slow = slow.next;
+                fast = fast.next;
+            }
+            if(flag){
+                slow.next = node;
+                node.next = null;
+            }
+        }
+        return dummy.next;
+    }
+
+    //148
+    public ListNode sortList(ListNode head) {
+        if(head==null||head.next==null){
+            return head;
+        }
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while(fast!=null&&fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode temp = slow.next;
+        slow.next = null;
+        ListNode left = sortList(head);
+        ListNode right = sortList(temp);
+
+        ListNode dummy = new ListNode(0);
+        ListNode cur = dummy;
+        while(left!=null&&right!=null){
+            if(left.val<=right.val){
+                cur.next = left;
+                left = left.next;
+            }
+            else{
+                cur.next = right;
+                right = right.next;
+            }
+            cur = cur.next;
+        }
+        if(left!=null){
+            cur.next = left;
+        }
+        if(right!=null){
+            cur.next = right;
+        }
+        return dummy.next;
+    }
+
+
+    //149
+    public int maxPoints(int[][] points) {
+        if(points.length<3)
+            return points.length;
+        int res = 0;
+        for(int i=0;i<points.length;i++){
+            int duplicate = 0;
+            HashMap<String,Integer> map = new HashMap<>();
+            int max = 0;
+            for(int j=i+1;j<points.length;j++){
+                int x = points[j][0] - points[i][0];
+                int y = points[j][1] - points[i][1];
+                if(x==0 && y==0){
+                    duplicate++;
+                    continue;
+                }
+                int gcd = gcd(x,y);
+                x = x/gcd;
+                y = y/gcd;
+                String key = x+"@"+y;
+                map.put(key,map.getOrDefault(key,0)+1);
+                max = Math.max(max,map.get(key));
+            }
+            res = Math.max(res,max+duplicate+1);
+        }
+        return res;
+    }
+
+    private int gcd(int a,int b){
+        while(b!=0){
+            int temp = a%b;
+            a = b;
+            b = temp;
+        }
+        return a;
+    }
+
+
+    //150
+    public int evalRPN(String[] tokens) {
+        Stack<Integer> stack = new Stack<>();
+        for(int i=0;i<tokens.length;i++){
+            if(tokens[i].equals("+")){
+                int x2 = stack.pop();
+                int x1 = stack.pop();
+                stack.push(x1+x2);
+            }
+            else if(tokens[i].equals("-")){
+                int x2 = stack.pop();
+                int x1 = stack.pop();
+                stack.push(x1-x2);
+            }
+            else if(tokens[i].equals("*")){
+                int x2 = stack.pop();
+                int x1 = stack.pop();
+                stack.push(x1*x2);
+            }
+            else if(tokens[i].equals("/")){
+                int x2 = stack.pop();
+                int x1 = stack.pop();
+                stack.push(x1/x2);
+            }
+            else {
+                stack.push(Integer.valueOf(tokens[i]));
+            }
+        }
+        return stack.pop();
+    }
+
+    public int evalRPNII(String[] tokens) {
+        Stack<Integer> stack = new Stack<>();
+        for(String token:tokens){
+            switch (token){
+                case "+":
+                    stack.push(stack.pop()+stack.pop());
+                    break;
+                case "-":
+                    int num = stack.pop();
+                    stack.push(stack.pop()-num);
+                    break;
+                case "*":
+                    stack.push(stack.pop()*stack.pop());
+                    break;
+                case "/":
+                    int num2 = stack.pop();
+                    stack.push(stack.pop()/num2);
+                    break;
+                default:
+                    stack.push(Integer.valueOf(token));
+            }
+        }
+        return stack.pop();
+    }
 }
