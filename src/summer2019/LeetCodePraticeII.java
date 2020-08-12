@@ -3,6 +3,7 @@ package summer2019;
 import jdk.nashorn.api.tree.Tree;
 
 import javax.naming.InsufficientResourcesException;
+import javax.swing.text.MaskFormatter;
 import java.lang.reflect.Array;
 import java.util.*;
 
@@ -2690,11 +2691,6 @@ public class LeetCodePraticeII {
     }
 
 
-    public static void main(String[] args) {
-        LeetCodePraticeII leetCodePraticeII = new LeetCodePraticeII();
-        leetCodePraticeII.minCut("aab");
-    }
-
 
     //132
     public int minCut(String s) {
@@ -2958,6 +2954,110 @@ public class LeetCodePraticeII {
     }
 
 
+    //141
+    public boolean hasCycle(ListNode head) {
+        List<ListNode> nodes = new ArrayList<>();
+        if(head == null)
+            return false;
+        ListNode cur = head;
+        while(cur.next!=null){
+            if(!nodes.isEmpty()&&nodes.contains(cur.next)){
+                return true;
+            }
+            nodes.add(cur);
+            cur = cur.next;
+        }
+        return false;
+    }
+
+    //142
+    public ListNode detectCycle(ListNode head) {
+        List<ListNode> nodes = new ArrayList<>();
+        if(head == null)
+            return null;
+        ListNode cur = head;
+        while(cur.next!=null){
+            if(!nodes.isEmpty()&&nodes.contains(cur.next)){
+                return cur.next;
+            }
+            nodes.add(cur);
+            cur = cur.next;
+        }
+        return null;
+    }
+
+    //143
+    public void reorderList(ListNode head) {
+        List<ListNode> nodes = new ArrayList<>();
+        while(head!=null){
+            nodes.add(head);
+            head = head.next;
+        }
+        ListNode dummy = new ListNode(0);
+        ListNode cur = dummy;
+        int left = 0;
+        int right = nodes.size()-1;
+        while(left<right){
+            cur.next = nodes.get(left);
+            cur.next.next = nodes.get(right);
+            cur = cur.next.next;
+            left++;
+            right--;
+        }
+        if(nodes.size()%2==1){
+            cur.next = nodes.get(left);
+            cur = cur.next;
+        }
+        cur.next = null;
+        head = dummy.next;
+    }
+
+    //144
+    /** 144
+     * 前序遍历的非递归实现 :  访问根 右节点进栈 左节点进栈
+     */
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if(root==null)
+            return res;
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            res.add(node.val);
+            if(node.right!=null){
+                stack.push(node.right);
+            }
+            if(node.left!=null){
+                stack.push(node.left);
+            }
+        }
+        return res;
+    }
+
+    //145
+    /**  145
+     * 后序遍历的非递归实现 : 访问根(加在集合的最前面) 左节点进栈 右节点进栈
+     */
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if(root==null)
+            return res;
+        stack.push(root);
+        while(!stack.isEmpty()){
+            TreeNode node = stack.pop();
+            res.add(0,node.val);
+            if(node.left!=null){
+                stack.push(node.left);
+            }
+            if(node.right!=null){
+                stack.push(node.right);
+            }
+        }
+        return res;
+    }
+
     //147
     public ListNode insertionSortList(ListNode head) {
         if(head==null)
@@ -3123,5 +3223,122 @@ public class LeetCodePraticeII {
             }
         }
         return stack.pop();
+    }
+
+
+    public static void main(String[] args) {
+        LeetCodePraticeII leetCodePraticeII = new LeetCodePraticeII();
+        System.out.println(leetCodePraticeII.reverseWords("a good   example"));
+    }
+
+
+    //151
+    /**  官方解答  参考下API
+     // 除去开头和末尾的空白字符
+     s = s.trim();
+     // 正则匹配连续的空白字符作为分隔符分割
+     List<String> wordList = Arrays.asList(s.split("\\s+"));
+     Collections.reverse(wordList);
+     return String.join(" ", wordList);
+
+     */
+    public String reverseWords(String s) {
+        String[] strs = s.trim().split(" ");
+        StringBuilder sb = new StringBuilder();
+        for(int i=strs.length-1;i>=0;i--){
+            if(strs[i].length()>0){
+                sb.append(strs[i]+" ");
+            }
+        }
+        return sb.toString().trim();
+    }
+
+
+
+    //152
+    public int maxProduct(int[] nums) {
+        int res = Integer.MIN_VALUE;
+        int imax = 1;
+        int imin = 1;
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]<0){
+                int temp = imin;
+                imin = imax;
+                imax = temp;
+            }
+            imax = Math.max(nums[i]*imax,nums[i]);
+            imin = Math.min(nums[i]*imin,nums[i]);
+
+            res = Math.max(res,imax);
+        }
+        return res;
+    }
+
+    public int maxProductII(int[] nums) {
+        int res = nums[0];
+        for(int i=1;i<nums.length;i++){
+            int temp = nums[i];
+            res = Math.max(temp,res);
+            for(int j=i-1;j>=0;j--){
+                temp = temp*nums[j];
+                res = Math.max(res,temp);
+            }
+        }
+        return res;
+    }
+
+
+    //153
+    public int findMin(int[] nums) {
+        int left = 0;
+        int right = nums.length-1;
+        while(left+1<right){
+            int mid = left + (right-left)/2;
+            if(nums[left]>nums[mid]){
+                right = mid;
+            }
+            else if(nums[right]<nums[mid]){
+                left = mid;
+            }
+            else {
+                return nums[left];
+            }
+        }
+        return Math.min(nums[left],nums[right]);
+    }
+
+    public int findMinII(int[] nums) {
+        int left = 0;
+        int right = nums.length-1;
+        while(left<right){
+            int mid = left + (right-left)/2;
+            if(nums[right]<nums[mid]){
+                left = mid+1;
+            }
+            else {
+                right = mid;
+            }
+        }
+        return nums[left];
+    }
+
+
+
+    //154
+    public int findMinIII(int[] nums) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[right] < nums[mid]) {
+                left = mid + 1;
+            } else if(nums[left] > nums[mid]){
+                right = mid;
+            }
+            else {
+                right--;
+            }
+        }
+        return nums[left];
     }
 }
