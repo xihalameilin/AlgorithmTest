@@ -3413,4 +3413,33 @@ public class LeetCodePraticeII {
         }
         return left;
     }
+
+
+    //164 最大间距 桶排序
+    public int maximumGap(int[] nums) {
+        if(nums == null || nums.length == 0) return 0 ;
+        int max = Integer.MIN_VALUE, min = Integer.MAX_VALUE;
+        for(int num : nums) {
+            max = Math.max(num, max);
+            min = Math.min(num, min);
+        }
+        int gap = (int)Math.ceil((double)(max - min) / nums.length);
+        if(gap == 0) return 0;
+        int size = (max - min) / gap + 1;
+        int[] bucketMax = new int[size];
+        int[] bucketMin = new int[size];
+        Arrays.fill(bucketMax, Integer.MIN_VALUE);
+        Arrays.fill(bucketMin, Integer.MAX_VALUE);
+        for(int val : nums) {
+            int idx = (val - min) / gap;
+            bucketMax[idx] = Math.max(bucketMax[idx], val);
+            bucketMin[idx] = Math.min(bucketMin[idx], val);
+        }
+        for(int i = 0; i < size; i++) {
+            if(bucketMin[i] == Integer.MAX_VALUE && bucketMax[i] == Integer.MIN_VALUE) continue;
+            gap = Math.max(gap, bucketMin[i] - min);
+            min = bucketMax[i]; // 上一个最大的距离下一个最小的是相邻节点
+        }
+        return gap;
+    }
 }
