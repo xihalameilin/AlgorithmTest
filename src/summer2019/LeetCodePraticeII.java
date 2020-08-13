@@ -3341,4 +3341,76 @@ public class LeetCodePraticeII {
         }
         return nums[left];
     }
+
+
+
+    //160
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if(headA==null||headB==null)
+            return null;
+        List<ListNode> nodes = new ArrayList<>();
+        while(headA!=null){
+            nodes.add(headA);
+            headA = headA.next;
+        }
+        if(nodes.size()==0)
+            return null;
+        while(headB!=null){
+            if(nodes.contains(headB))
+                return headB;
+            headB = headB.next;
+        }
+        return null;
+    }
+    public ListNode getIntersectionNodeII(ListNode headA, ListNode headB) {
+        if(headA==null||headB==null)
+            return null;
+        int lengthA = 0;
+        int lengthB = 0;
+        ListNode nodea = headA;
+        ListNode nodeb = headB;
+        while(nodea!=null){
+            lengthA++;
+            nodea = nodea.next;
+        }
+        while(nodeb!=null){
+            lengthB++;
+            nodeb = nodeb.next;
+        }
+        nodea = headA;
+        nodeb = headB;
+        int diff = lengthA-lengthB;
+        if(diff>0){
+            for(int i=0;i<diff;i++){
+                nodea = nodea.next;
+            }
+        }
+        else if(diff<0){
+            for(int i=0;i<-diff;i++){
+                nodeb = nodeb.next;
+            }
+        }
+        while(nodea!=nodeb){
+            nodea = nodea.next;
+            nodeb = nodeb.next;
+        }
+        return nodea;
+    }
+
+
+    //162
+    public int findPeakElement(int[] nums) {
+        int left = 0;
+        int right = nums.length-1;
+        while(left<right){
+            int mid = left + (right-left)/2;
+            if(nums[mid]>nums[mid+1]){
+                right = mid;
+            }
+            else {
+                left = mid+1;
+            }
+        }
+        return left;
+    }
 }
