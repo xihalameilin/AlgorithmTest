@@ -3226,11 +3226,6 @@ public class LeetCodePraticeII {
     }
 
 
-    public static void main(String[] args) {
-        LeetCodePraticeII leetCodePraticeII = new LeetCodePraticeII();
-        System.out.println(leetCodePraticeII.reverseWords("a good   example"));
-    }
-
 
     //151
     /**  官方解答  参考下API
@@ -3441,5 +3436,142 @@ public class LeetCodePraticeII {
             min = bucketMax[i]; // 上一个最大的距离下一个最小的是相邻节点
         }
         return gap;
+    }
+
+    public static void main(String[] args) {
+        LeetCodePraticeII leetCodePraticeII = new LeetCodePraticeII();
+        leetCodePraticeII.compareVersion("1","1.1");
+    }
+    //165
+    public int compareVersion(String version1, String version2) {
+        List<String> v1 = new ArrayList<>(Arrays.asList(version1.split("\\.")));
+        List<String> v2 = new ArrayList<>(Arrays.asList(version2.split("\\.")));
+        int size1 = v1.size();
+        int size2 = v2.size();
+        if(size1>size2){
+            for(int i=0;i<size1-size2;i++){
+                v2.add("0");
+            }
+        }
+        else if(size1<size2){
+            for(int i=0;i<size2-size1;i++){
+                v1.add("0");
+            }
+        }
+        for(int i=0;i<v1.size();i++){
+            Integer a = Integer.valueOf(v1.get(i));
+            Integer b = Integer.valueOf(v2.get(i));
+            System.out.println("a:"+a+" b:"+b);
+            if(a>b)
+                return 1;
+            else if(a<b)
+                return -1;
+        }
+        return 0;
+
+    }
+
+    public int compareVersionII(String version1, String version2) {
+        String[] a1 = version1.split("\\.");
+        String[] a2 = version2.split("\\.");
+
+        for (int n = 0; n < Math.max(a1.length, a2.length); n++) {
+            int i = (n < a1.length ? Integer.valueOf(a1[n]) : 0);
+            int j = (n < a2.length ? Integer.valueOf(a2[n]) : 0);
+            if (i < j) return -1;
+            else if (i > j) return 1;
+        }
+        return 0;
+    }
+
+    //166
+    public String fractionToDecimal(int numerator, int denominator) {
+        if (numerator == 0) {
+            return "0";
+        }
+        StringBuilder fraction = new StringBuilder();
+        // If either one is negative (not both)
+        if (numerator < 0 ^ denominator < 0) {
+            fraction.append("-");
+        }
+        // Convert to Long or else abs(-2147483648) overflows
+        long dividend = Math.abs(Long.valueOf(numerator));
+        long divisor = Math.abs(Long.valueOf(denominator));
+        fraction.append(String.valueOf(dividend / divisor));
+        long remainder = dividend % divisor;
+        if (remainder == 0) {
+            return fraction.toString();
+        }
+        fraction.append(".");
+        Map<Long, Integer> map = new HashMap<>();
+        while (remainder != 0) {
+            if (map.containsKey(remainder)) {
+                fraction.insert(map.get(remainder), "(");
+                fraction.append(")");
+                break;
+            }
+            map.put(remainder, fraction.length());
+            remainder *= 10;
+            fraction.append(String.valueOf(remainder / divisor));
+            remainder %= divisor;
+        }
+        return fraction.toString();
+    }
+
+
+    //167
+    public int[] twoSum(int[] numbers, int target) {
+        int low = 0;
+        int high = numbers.length-1;
+        while(low<high){
+            if(numbers[low]+numbers[high] == target){
+                return new int[]{low+1,high+1};
+            }
+            else if(numbers[low]+numbers[high] > target)
+                high--;
+            else
+                low++;
+        }
+        return new int[]{-1,-1};
+    }
+
+    //168
+    public String convertToTitle(int n) {
+        StringBuilder sb = new StringBuilder();
+        while(n>0){
+            n--;
+            sb.append((char)('A'+n%26));
+            n = n/26;
+        }
+        return sb.toString();
+    }
+
+
+    //169
+    public int majorityElement(int[] nums) {
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int num:nums){
+            map.put(num,map.getOrDefault(num,0)+1);
+        }
+        for(int key:map.keySet()){
+            if(map.get(key)>nums.length/2)
+                return key;
+        }
+        return -1;
+    }
+
+    //投票算法
+    public int majorityElementII(int[] nums) {
+        int candidate = 0;
+        int count = 0;
+        for(int num:nums){
+            if(count == 0)
+                candidate = num;
+            if(num == candidate)
+                count++;
+            else
+                count--;
+        }
+        return candidate;
     }
 }
