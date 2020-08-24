@@ -3438,10 +3438,6 @@ public class LeetCodePraticeII {
         return gap;
     }
 
-    public static void main(String[] args) {
-        LeetCodePraticeII leetCodePraticeII = new LeetCodePraticeII();
-        leetCodePraticeII.compareVersion("1","1.1");
-    }
     //165
     public int compareVersion(String version1, String version2) {
         List<String> v1 = new ArrayList<>(Arrays.asList(version1.split("\\.")));
@@ -3574,4 +3570,202 @@ public class LeetCodePraticeII {
         }
         return candidate;
     }
+
+
+    //171
+    public int titleToNumber(String s) {
+        int res = 0;
+        int chengshu = 1;
+        for(int i=s.length()-1;i>=0;i--){
+            int temp = s.charAt(i)-'A'+1;
+            res += chengshu*temp;
+            chengshu = chengshu * 26;
+        }
+        return res;
+    }
+
+
+    //172
+    public int trailingZeroes(int n) {
+        int count = 0;
+        while(n >= 5) {
+            count += n / 5;
+            n /= 5;
+        }
+        return count;
+    }
+
+
+    public static void main(String[] args) {
+        LeetCodePraticeII leetCodePraticeII = new LeetCodePraticeII();
+        leetCodePraticeII.findRepeatedDnaSequences("AAAAAAAAAAA");
+    }
+
+    //187
+    public List<String> findRepeatedDnaSequences(String s) {
+        if(s==null||s.length()<10)
+            return new ArrayList<>();
+        Map<String,Integer> map = new HashMap<>();
+        List<String> res = new ArrayList<>();
+        for(int i=0;i<=s.length()-10;i++){
+            String temp = s.substring(i,i+10);
+            map.put(temp, map.getOrDefault(temp,0)+1);
+        }
+        for(String key:map.keySet()){
+            if(map.get(key)>1)
+                res.add(key);
+        }
+        return res;
+    }
+
+    public List<String> findRepeatedDnaSequencesII(String s) {
+        if (s == null || s.length() == 0) {
+            return new ArrayList<>();
+        }
+
+        HashSet<String> set = new HashSet<>();
+        HashSet<String> ans = new HashSet<>();
+        for (int i = 0; i + 10 <= s.length(); i++) {
+            String key = s.substring(i, i + 10);
+            // 如果这个 key 已经在 set 中存在过了，则说明字符串 key 出现次数超过了 1，
+            // 因此，我们此时需要收集结果，将字符串 key 存入结果集 ans 中即可。
+            if (set.contains(key)) {
+                ans.add(key);
+            } else {
+                set.add(key);
+            }
+        }
+        return new ArrayList<>(ans);
+    }
+
+    public void rotate(int[] nums, int k) {
+        k = k%nums.length;
+        swapfor189(nums,0, nums.length);
+        swapfor189(nums,0,k-1);
+        swapfor189(nums,k,nums.length);
+    }
+
+    private void swapfor189(int[] nums,int left,int right){
+        while(left<right){
+            int temp = nums[right];
+            nums[right] = nums[left];
+            nums[left] = temp;
+            left++;
+            right--;
+        }
+    }
+
+    public int reverseBits(int n) {
+       int times = 32;
+       int res = 0;
+       while(times-->0){
+           res = res<<1;
+           res += n&1;
+           n = n>>1;
+       }
+       return res;
+    }
+
+
+    //191
+    public int hammingWeight(int n) {
+        int res = 0;
+        while(n!=0){
+            res += n&1;
+            n >>>= 1;
+        }
+        return res;
+    }
+
+
+    //198
+    public int rob(int[] nums) {
+        if(nums.length==0)
+            return 0;
+        if(nums.length==1)
+            return nums[0];
+        if(nums.length==2)
+            return Math.max(nums[0],nums[1]);
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+        dp[1] = nums[1];
+        for(int i=2;i<nums.length;i++){
+            for(int j=0;j<i-1;j++){
+                dp[i] = Math.max(dp[j] + nums[i],dp[i]);
+            }
+
+        }
+        return Math.max(dp[nums.length-1],dp[nums.length-2]);
+    }
+
+    public int robII(int[] nums) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        int length = nums.length;
+        if (length == 1) {
+            return nums[0];
+        }
+        int[] dp = new int[length];
+        dp[0] = nums[0];
+        dp[1] = Math.max(nums[0], nums[1]);
+        for (int i = 2; i < length; i++) {
+            dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
+        }
+        return dp[length - 1];
+    }
+
+    public List<Integer> rightSideView(TreeNode root) {
+        if(root==null)
+            return new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        List<Integer> res = new ArrayList<>();
+        while(!queue.isEmpty()){
+            int size = queue.size();
+            for(int i=0;i<size;i++){
+                TreeNode treeNode = queue.poll();
+                if(treeNode.left!=null)
+                    queue.offer(treeNode.left);
+                if(treeNode.right!=null)
+                    queue.offer(treeNode.right);
+                if(i==size-1)
+                    res.add(treeNode.val);
+            }
+        }
+        return res;
+    }
+
+
+
+    //200
+    public int numIslands(char[][] grid) {
+        int res = 0;
+        int row = grid.length;
+        int col = grid[0].length;
+        if(grid==null||row==0||col==0)
+            return 0;
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+                if(grid[i][j]=='1'){
+                    res++;
+                    help200(grid,i,j);
+                }
+            }
+        }
+        return res;
+    }
+
+    private void help200(char[][] grid,int x,int y){
+        int row = grid.length;
+        int col = grid[0].length;
+        if(x>=0&&x<row&&y>=0&&y<col&&grid[x][y]=='1'){
+            grid[x][y] = '0';
+            help200(grid,x+1,y);
+            help200(grid,x-1,y);
+            help200(grid,x,y+1);
+            help200(grid,x,y-1);
+        }
+    }
+
 }
