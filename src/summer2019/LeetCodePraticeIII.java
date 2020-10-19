@@ -99,5 +99,59 @@ public class LeetCodePraticeIII {
         return true;
     }
 
+    //219
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        for(int i=0;i<nums.length;i++){
+            for(int j=i+1;j<nums.length&&j<=i+k;j++){
+                if(nums[i]==nums[j])
+                    return true;
+            }
+        }
+        return false;
+    }
 
+    public boolean containsNearbyDuplicateI(int[] nums, int k) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            if(map.containsKey(nums[i])){
+                if(Math.abs(i-map.get(nums[i]))<=k)
+                    return true;
+            }
+            map.put(nums[i],i);
+        }
+        return false;
+    }
+
+
+    //滑动窗口
+    public boolean containsNearbyDuplicateII(int[] nums, int k) {
+        Set<Integer> set = new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            if(set.contains(nums[i]))
+                return true;
+            set.add(nums[i]);
+            if(set.size()>k)
+                set.remove(nums[i-k]);
+        }
+        return false;
+    }
+
+
+
+    //220
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        TreeSet<Long> set = new TreeSet<>();
+        for(int i=0;i<nums.length;i++){
+            Long successor = set.ceiling((long)nums[i]);
+            if(successor!=null&&(long)nums[i]+t>=successor)
+                return true;
+            Long predecessor = set.floor((long)nums[i]);
+            if(predecessor!=null&&(long)nums[i]-t<=predecessor)
+                return true;
+            set.add((long)nums[i]);
+            if(set.size()>k)
+                set.remove((long)nums[i-k]);
+        }
+        return false;
+    }
 }
