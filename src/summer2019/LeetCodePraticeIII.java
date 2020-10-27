@@ -154,4 +154,52 @@ public class LeetCodePraticeIII {
         }
         return false;
     }
+
+    //223
+    public int computeArea(int A, int B, int C, int D, int E, int F, int G, int H) {
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(A);
+        list1.add(C);
+        list1.add(E);
+        list1.add(G);
+
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(B);
+        list2.add(D);
+        list2.add(F);
+        list2.add(H);
+        List<Integer> res1 = getMedia(list1);
+        List<Integer> res2 = getMedia(list2);
+        int off = 0;
+        if(E>=C||G<=A||F>=D||H<=B){
+        }
+        else{
+            off = Math.abs(res1.get(0)-res1.get(1)) * Math.abs(res2.get(0)-res2.get(1));
+        }
+        return (C-A)*(D-B) + (G-E)*(H-F) - off;
+
+    }
+
+    private List<Integer> getMedia(List<Integer> list){
+        int max = list.get(0);
+        int min = list.get(0);
+        for(int i : list){
+            if( i > max)
+                max = i;
+            if( i < min)
+                min = i;
+        }
+        list.remove(list.indexOf(max));
+        list.remove(list.indexOf(min));
+        List<Integer> res = new ArrayList<>();
+        res.add(list.get(0));
+        res.add(list.get(1));
+        return res;
+    }
+
+    //224
+    public int calculate(String s) {
+        String[] items = s.split(" ");
+        return 0;
+    }
 }
