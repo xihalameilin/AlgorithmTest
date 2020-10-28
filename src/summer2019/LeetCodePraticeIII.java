@@ -3,6 +3,13 @@ package summer2019;
 import java.util.*;
 
 public class LeetCodePraticeIII {
+
+      class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+      }
     public static void main(String[] args) {
         String s = new LeetCodePraticeIII().shortestPalindrome("abcd");
         System.out.println(s);
@@ -153,5 +160,156 @@ public class LeetCodePraticeIII {
                 set.remove((long)nums[i-k]);
         }
         return false;
+    }
+
+
+    //221
+    public int maximalSquare(char[][] matrix) {
+        int row = matrix.length;
+        if(row<1)
+            return 0;
+        int col = matrix[0].length;
+        int[][] dp = new int[row+1][col+1];
+        int max = 0;
+        for(int i = 1;i <= row;i++){
+            for(int j = 1;j <= col;j++){
+                if(matrix[i-1][j-1] == '1'){
+                   dp[i][j] = 1 + Math.min(dp[i][j-1],Math.min(dp[i-1][j-1],dp[i-1][j]));
+                   max = Math.max(dp[i][j],max);
+                }
+            }
+        }
+        return max*max;
+    }
+
+    //221
+    public int maximalSquareII(char[][] matrix) {
+        int max = 0;
+        for (int i = 0; i < matrix.length; i++)
+            for (int j = 0; j < matrix[0].length; j++)
+                if (matrix[i][j] == '1') max = Math.max(max, helpof221(matrix, i, j));
+        return max;
+    }
+
+    private int helpof221(char[][] matrix,int x,int y){
+        int max = 0;
+        for(; max+x < matrix.length && max+y < matrix[0].length;max++){
+            for(int i = x;i < x+max; i++){
+                if(matrix[i][y+max] != '1')
+                    return max*max;
+            }
+            for(int i = y;i < y+max; i++){
+                if(matrix[x+max][i] != '1')
+                    return max*max;
+            }
+        }
+        return max*max;
+    }
+
+    //226
+    public TreeNode invertTree(TreeNode root) {
+          if(root == null)
+              return null;
+          else{
+              TreeNode temp = root.right;
+              root.right = root.left;
+              root.left = temp;
+
+              invertTree(root.left);
+              invertTree(root.right);
+              return root;
+          }
+    }
+
+
+    //228
+    public List<String> summaryRanges(int[] nums) {
+        List<String> res = new ArrayList<>();
+        int index = 0;
+        while( index < nums.length){
+            int begin = nums[index];
+            int end = nums[index];
+            index ++;
+            for (int i=index;i<nums.length;i++){
+                if(end + 1 == nums[i]){
+                    index ++;
+                    end ++;
+                }
+                else{
+                    index --;
+                    break;
+                }
+            }
+            index ++ ;
+            if(begin == end)
+                res.add(String.valueOf(begin));
+            else
+                res.add(String.valueOf(begin)+"->"+String.valueOf(end));
+        }
+        return res;
+    }
+
+
+    public List<String> summaryRangesII(int[] nums) {
+          List<String> res = new ArrayList<>();
+          for(int i = 0; i < nums.length; i ++){
+              int index = i;
+              while(index + 1<nums.length && nums[index]+1 == nums[index+1]){
+                  index++;
+              }
+              if(index == i)
+                  res.add(String.valueOf(nums[i]));
+              else {
+                  res.add((nums[i])+"->"+(nums[index]));
+                  i = index;
+              }
+          }
+          return res;
+    }
+
+    //229 摩尔投票算法 计算出现次数较多的数
+    public List<Integer> majorityElement(int[] nums) {
+          List<Integer> res = new ArrayList<>();
+          if(nums == null || nums.length == 0)
+              return res;
+          int candidate1 = nums[0];
+          int candidate2 = nums[0];
+          int vote1 = 0;
+          int vote2 = 0;
+          for (int num:nums){
+              if(num == candidate1){
+                  vote1 ++;
+                  continue;
+              }
+              if(num == candidate2){
+                  vote2 ++;
+                  continue;
+              }
+              if(vote1 == 0 && candidate2 != num){
+                  vote1 ++;
+                  candidate1 = num;
+                  continue;
+              }
+              if(vote2 == 0 && candidate1 != num){
+                  vote2 ++;
+                  candidate2 = num;
+                  continue;
+              }
+              vote1 --;
+              vote2 --;
+          }
+
+          int count1 = 0, count2 = 0;
+          for(int num:nums){
+              if(num == candidate1)
+                  count1 ++;
+              if(num == candidate2)
+                  count2 ++;
+          }
+          if(count1 > nums.length/3)
+              res.add(candidate1);
+          if(candidate1 != candidate2 && count2 > nums.length/3)
+              res.add(candidate2);
+          return res;
     }
 }
