@@ -3,6 +3,13 @@ package summer2019;
 import java.util.*;
 
 public class LeetCodePraticeIII {
+
+    class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+  }
     public static void main(String[] args) {
         String s = new LeetCodePraticeIII().shortestPalindrome("abcd");
         System.out.println(s);
@@ -201,5 +208,112 @@ public class LeetCodePraticeIII {
     public int calculate(String s) {
         String[] items = s.split(" ");
         return 0;
+    }
+
+    //226
+    public TreeNode invertTree(TreeNode root) {
+        if(root == null)
+            return null;
+        else{
+            TreeNode temp = root.right;
+            root.right = root.left;
+            root.left = temp;
+
+            invertTree(root.left);
+            invertTree(root.right);
+            return root;
+        }
+    }
+
+
+    //228
+    public List<String> summaryRanges(int[] nums) {
+        List<String> res = new ArrayList<>();
+        int index = 0;
+        while( index < nums.length){
+            int begin = nums[index];
+            int end = nums[index];
+            index ++;
+            for (int i=index;i<nums.length;i++){
+                if(end + 1 == nums[i]){
+                    index ++;
+                    end ++;
+                }
+                else{
+                    index --;
+                    break;
+                }
+            }
+            index ++ ;
+            if(begin == end)
+                res.add(String.valueOf(begin));
+            else
+                res.add(String.valueOf(begin)+"->"+String.valueOf(end));
+        }
+        return res;
+    }
+
+
+    public List<String> summaryRangesII(int[] nums) {
+        List<String> res = new ArrayList<>();
+        for(int i = 0; i < nums.length; i ++){
+            int index = i;
+            while(index + 1<nums.length && nums[index]+1 == nums[index+1]){
+                index++;
+            }
+            if(index == i)
+                res.add(String.valueOf(nums[i]));
+            else {
+                res.add((nums[i])+"->"+(nums[index]));
+                i = index;
+            }
+        }
+        return res;
+    }
+
+    //229 摩尔投票算法 计算出现次数较多的数
+    public List<Integer> majorityElement(int[] nums) {
+        List<Integer> res = new ArrayList<>();
+        if(nums == null || nums.length == 0)
+            return res;
+        int candidate1 = nums[0];
+        int candidate2 = nums[0];
+        int vote1 = 0;
+        int vote2 = 0;
+        for (int num:nums){
+            if(num == candidate1){
+                vote1 ++;
+                continue;
+            }
+            if(num == candidate2){
+                vote2 ++;
+                continue;
+            }
+            if(vote1 == 0 && candidate2 != num){
+                vote1 ++;
+                candidate1 = num;
+                continue;
+            }
+            if(vote2 == 0 && candidate1 != num){
+                vote2 ++;
+                candidate2 = num;
+                continue;
+            }
+            vote1 --;
+            vote2 --;
+        }
+
+        int count1 = 0, count2 = 0;
+        for(int num:nums){
+            if(num == candidate1)
+                count1 ++;
+            if(num == candidate2)
+                count2 ++;
+        }
+        if(count1 > nums.length/3)
+            res.add(candidate1);
+        if(candidate1 != candidate2 && count2 > nums.length/3)
+            res.add(candidate2);
+        return res;
     }
 }
