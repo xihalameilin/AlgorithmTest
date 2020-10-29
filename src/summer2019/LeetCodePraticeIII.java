@@ -316,4 +316,45 @@ public class LeetCodePraticeIII {
             res.add(candidate2);
         return res;
     }
+
+
+    //230  找到二叉搜索树第K小的元素
+    List<TreeNode> list0f230 = new ArrayList<>();
+    public int kthSmallest(TreeNode root, int k) {
+        help230(root);
+        return list0f230.get(k-1).val;
+    }
+
+    private void help230(TreeNode treeNode){
+        if(treeNode == null)
+            return;
+        help230(treeNode.left);
+        list0f230.add(treeNode);
+        help230(treeNode.right);
+    }
+
+    // 二叉搜索树的非递归遍历
+    public int kthSmallestII(TreeNode root, int k) {
+        Stack<TreeNode> stack = new Stack<>();
+        while(true){
+            while(root!=null){
+                stack.push(root);
+                root = root.left;
+            }
+            TreeNode temp = stack.pop();
+            k--;
+            if(k == 0)
+                return temp.val;
+            root = temp.right;
+        }
+    }
+
+
+    //231
+    public boolean isPowerOfTwo(int n) {
+        if(n <= 0)
+            return false;
+        else
+            return (n & (n - 1)) == 0;
+    }
 }
