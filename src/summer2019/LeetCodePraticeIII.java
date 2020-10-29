@@ -10,11 +10,7 @@ public class LeetCodePraticeIII {
       TreeNode right;
       TreeNode(int x) { val = x; }
   }
-    public static void main(String[] args) {
-        String s = new LeetCodePraticeIII().shortestPalindrome("abcd");
-        System.out.println(s);
 
-    }
     //214 前面补齐字符 使成为最短的回文
     public String shortestPalindrome(String s) {
        String reverse = new StringBuilder(s).reverse().toString();
@@ -356,5 +352,51 @@ public class LeetCodePraticeIII {
             return false;
         else
             return (n & (n - 1)) == 0;
+    }
+
+
+    //232
+    public int countDigitOne(int n) {
+        int res = 0;
+        for(int i=1;i<n;i++)
+            res += help232(i);
+        return res;
+    }
+
+    private int help232(int n){
+        String s = String.valueOf(n);
+        int res = 0;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i) == '1')
+                res++;
+        }
+        return res;
+    }
+
+  public static void main(String[] args) {
+    System.out.println(
+    new LeetCodePraticeIII().countDigitOneII(13));
+  }
+
+    public int countDigitOneII(int n) {
+        String s = String.valueOf(n);
+        int k = 1;
+        int res = 0;
+        for(int i=s.length()-1;i>=0;i--){
+            StringBuilder sb = new StringBuilder(s);
+            int time = String.valueOf(k).length()-1;
+            int index = i + 1;
+            while(time > 0){
+                sb.setCharAt(index,'0');
+                time--;
+                index ++;
+            }
+            sb.setCharAt(i,'1');
+            System.out.println(sb.toString());
+            int begin = Integer.valueOf(sb.toString());
+            res += n/10 + Math.min(n-begin+1,k);
+            k = k * 10;
+        }
+        return res;
     }
 }
