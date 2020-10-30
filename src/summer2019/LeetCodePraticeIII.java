@@ -1,5 +1,7 @@
 package summer2019;
 
+import sun.applet.AppletResourceLoader;
+
 import java.util.*;
 
 public class LeetCodePraticeIII {
@@ -9,6 +11,12 @@ public class LeetCodePraticeIII {
       TreeNode left;
       TreeNode right;
       TreeNode(int x) { val = x; }
+  }
+
+    class ListNode {
+      int val;
+      ListNode next;
+      ListNode(int x) { val = x; }
   }
 
     //214 前面补齐字符 使成为最短的回文
@@ -373,11 +381,6 @@ public class LeetCodePraticeIII {
         return res;
     }
 
-  public static void main(String[] args) {
-    System.out.println(
-    new LeetCodePraticeIII().countDigitOneII(13));
-  }
-
     public int countDigitOneII(int n) {
         if(n<=0)
             return 0;
@@ -415,5 +418,97 @@ public class LeetCodePraticeIII {
             k = k * 10;
         }
         return res;
+    }
+
+
+    public static void main(String[] args) {
+
+                new LeetCodePraticeIII().test();
+    }
+
+    public void test(){
+        ListNode listNode = new ListNode(1);
+        ListNode listNode1 = new ListNode(0);
+        ListNode listNode2 = new ListNode(0);
+        listNode.next = listNode1;
+        listNode1.next = listNode2;
+        isPalindrome(listNode);
+    }
+
+    //234
+    public boolean isPalindrome(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        ListNode reverse = reverseListNode(slow);
+        while(head != null && reverse!= null){
+            if(head.val != reverse.val)
+                return false;
+            head = head.next;
+            reverse = reverse.next;
+        }
+        return true;
+    }
+
+    private ListNode reverseListNode(ListNode head){
+        if(head == null)
+            return null;
+        ListNode pre = null;
+        ListNode mid = head;
+        while(mid != null){
+            ListNode temp = mid.next;
+            mid.next = pre;
+            pre = mid;
+            mid = temp;
+        }
+        return pre;
+    }
+
+    private void showListNode(ListNode head){
+        while(head!=null){
+            System.out.print(head.val);
+            head = head.next;
+        }
+    }
+
+
+    //235
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        List<TreeNode> path1 = help235(root,p);
+        List<TreeNode> path2 = help235(root,q);
+        int max = Math.min(path1.size(),path2.size());
+        for(int i=max-1;i>=0;i--){
+            if(path1.get(i).val == path2.get(i).val)
+                return path1.get(i);
+        }
+        return null;
+    }
+
+    private List<TreeNode> help235(TreeNode root,TreeNode p){
+        List<TreeNode> res = new ArrayList<>();
+        while(true){
+            res.add(root);
+            if(root.val > p.val){
+                root = root.left;
+            }
+            else if(root.val < p.val){
+                root = root.right;
+            }
+            else{
+                break;
+            }
+        }
+        return res;
+    }
+
+    public TreeNode lowestCommonAncestorII(TreeNode root, TreeNode p, TreeNode q) {
+        if(root.val > p.val && root.val > q.val)
+            return lowestCommonAncestor(root.left,p,q);
+        else if(root.val < p.val && root.val < q.val)
+            return lowestCommonAncestor(root.right,p,q);
+        return root;
     }
 }
