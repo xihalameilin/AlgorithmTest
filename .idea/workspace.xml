@@ -20,42 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09fc045e-c520-4d70-b694-2f229905b392" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/Java8Tester$MathOperation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/Java8Tester$MathOperation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/Java8Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/Java8Tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo$MyThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo$MyThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/pailie/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/pailie/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPServer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPServer2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocket1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocket1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocket2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocket2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocketReceive.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/udp/UDPSocketReceive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test$MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test$MyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LRUCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LRUCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePractice$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePractice$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePractice$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePractice$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePractice.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePractice.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$ListNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$ListNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/MinStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/MinStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Special.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Special.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Trie$TreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Trie$TreeNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Trie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Trie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/WordDictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/WordDictionary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeII.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,17 +160,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -317,7 +271,8 @@
       <workItem from="1603526792953" duration="61000" />
       <workItem from="1603766462298" duration="1436000" />
       <workItem from="1603951074712" duration="1012000" />
-      <workItem from="1603970100764" duration="4821000" />
+      <workItem from="1603970100764" duration="5135000" />
+      <workItem from="1604020795537" duration="960000" />
     </task>
     <task id="LOCAL-00001" summary="8.11">
       <created>1597119741458</created>
@@ -381,22 +336,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="以前做的推上去" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1603980005003">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1603980322056">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603980005003" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1603980005003">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1603980322056" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1603980322056">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603980005003" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1603980005003">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1603980322056" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1603980322056">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603980005003" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1603980005003">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1603980322056" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1603980322056">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603980005003" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1603980322056" />
     <state x="781" y="344" key="SettingsEditor" timestamp="1603979783054">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

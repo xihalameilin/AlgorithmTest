@@ -379,8 +379,10 @@ public class LeetCodePraticeIII {
   }
 
     public int countDigitOneII(int n) {
+        if(n<=0)
+            return 0;
         String s = String.valueOf(n);
-        int k = 1;
+        long k = 1;
         int res = 0;
         for(int i=s.length()-1;i>=0;i--){
             StringBuilder sb = new StringBuilder(s);
@@ -392,9 +394,24 @@ public class LeetCodePraticeIII {
                 index ++;
             }
             sb.setCharAt(i,'1');
-            System.out.println(sb.toString());
+
             int begin = Integer.valueOf(sb.toString());
-            res += n/10 + Math.min(n-begin+1,k);
+            res += (n/(k*10))*k + Math.min(Math.max(n-begin+1,0),k);
+            k = k * 10;
+        }
+        return res;
+    }
+
+
+    public int countDigitOneIII(int n) {
+        if(n<=0)
+            return 0;
+        String s = String.valueOf(n);
+        long k = 1;
+        int res = 0;
+        for(int i=s.length()-1;i>=0;i--){
+            int begin = (int)(n/(k*10)*k*10 + k);
+            res += (n/(k*10))*k + Math.min(Math.max(n-begin+1,0),k);
             k = k * 10;
         }
         return res;
