@@ -1,6 +1,7 @@
 package summer2019;
 
 import sun.applet.AppletResourceLoader;
+import sun.reflect.generics.tree.Tree;
 
 import java.util.*;
 
@@ -421,10 +422,6 @@ public class LeetCodePraticeIII {
     }
 
 
-    public static void main(String[] args) {
-
-                new LeetCodePraticeIII().test();
-    }
 
     public void test(){
         ListNode listNode = new ListNode(1);
@@ -510,5 +507,91 @@ public class LeetCodePraticeIII {
         else if(root.val < p.val && root.val < q.val)
             return lowestCommonAncestor(root.right,p,q);
         return root;
+    }
+
+
+    //236
+    private Set<Integer> visited = new HashSet<>();
+    public TreeNode lowestCommonAncestorIII(TreeNode root, TreeNode p, TreeNode q) {
+        help236(root);
+        while(p != null){
+            visited.add(p.val);
+            p = map236.get(p.val);
+        }
+        while(q != null){
+            if(visited.contains(q.val)){
+                return q;
+            }
+            else{
+                q = map236.get(q.val);
+            }
+        }
+        return null;
+    }
+
+    private Map<Integer,TreeNode> map236 = new HashMap<>();
+    private void help236(TreeNode root){
+        if(root.left != null){
+            map236.put(root.left.val, root);
+            help236(root.left);
+        }
+        if(root.right != null){
+            map236.put(root.right.val, root);
+            help236(root.right);
+        }
+    }
+
+    public TreeNode lowestCommonAncestorIIII(TreeNode root, TreeNode p, TreeNode q) {
+        if(root == null)
+            return null;
+        if(root == p || root == q)
+            return root;
+        TreeNode left = lowestCommonAncestorIIII(root.left, p , q);
+        TreeNode right = lowestCommonAncestorIIII(root.right, p, q);
+        if(left != null && right !=null)
+            return root;
+        else if(left != null)
+            return left;
+        else if(right != null)
+            return right;
+        else
+            return null;
+    }
+
+
+    public static void main(String[] args) {
+
+        new LeetCodePraticeIII().productExceptSelf(new int[]{1, 2, 3, 4});
+    }
+
+    //238
+    public int[] productExceptSelf(int[] nums) {
+        int len = nums.length;
+        int[] res = new int[len];
+        Arrays.fill(res, 1);
+        int left = 1;
+        int right = 1;
+        for(int i = 0 ; i < len ; i ++){
+            res[i] = res[i] * left;
+            res[len - 1 - i] = res[len - 1 - i] * right;
+            left = left * nums[i];
+            right = right * nums[len - 1 - i];
+        }
+        return res;
+    }
+
+    public int[] productExceptSelfII(int[] nums) {
+        int len = nums.length;
+        int[] res = new int[len];
+        res[0] = 1;
+        for(int i = 1 ; i < len ; i++){
+            res[i] = res[i - 1] * nums[i - 1];
+        }
+        int R = 1;
+        for(int i = len - 1 ; i >= 0 ; --i ){
+            res[i] = res[i] * R;
+            R = R * nums[i];
+        }
+        return res;
     }
 }
