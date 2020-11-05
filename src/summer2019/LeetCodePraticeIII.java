@@ -590,11 +590,6 @@ public class LeetCodePraticeIII {
         }
         return res;
     }
-
-    public static void main(String[] args) {
-
-        new LeetCodePraticeIII().maxSlidingWindow(new int[]{7, 2, 4},2);
-    }
     //239
     public int[] maxSlidingWindow(int[] nums, int k) {
         if(nums == null || nums.length == 0)
@@ -616,4 +611,127 @@ public class LeetCodePraticeIII {
         }
         return res;
     }
+
+    //240
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if(matrix == null)
+            return false;
+        int row = matrix.length;
+        int col = matrix[0].length;
+        int r = 0;
+        int c = col;
+        while(true){
+            if(matrix[r][c] == target)
+                return true;
+            if(matrix[r][c] > target){
+                c -- ;
+                if(c<0)
+                    return false;
+            }
+            else {
+                r ++ ;
+                if(r > row)
+                    return false;
+            }
+        }
+    }
+
+
+    public static void main(String[] args) {
+
+        new LeetCodePraticeIII().diffWaysToCompute(new String("2*3-4*5"));
+    }
+    //241
+    public List<Integer> diffWaysToCompute(String input) {
+        List<Integer> res = new ArrayList<>();
+        int times = 0;
+        List<String> in = new ArrayList<>();
+        StringBuilder temp = new StringBuilder();
+        for(int i = 0 ; i < input.length() ; i ++){
+            if(input.charAt(i) == '+' || input.charAt(i) == '-' || input.charAt(i) == '*'){
+                times ++ ;
+                in.add(temp.toString());
+                in.add(input.substring(i,i+1));
+                temp = new StringBuilder();
+            }
+            else {
+                temp.append(input.charAt(i));
+            }
+        }
+        in.add(temp.toString());
+        //in.forEach(System.out::println);
+        help241(in,res,times);
+        res.forEach(System.out::println);
+        return res;
+    }
+
+    private void help241(List<String> input,List<Integer> res,int times){
+//        input.forEach(System.out::print);
+//        System.out.println(times);
+//        System.out.println();
+        if(times == 0){
+            System.out.println("trigger");
+            res.add(Integer.valueOf(input.get(0)));
+        }
+        for(int i = 0 ; i < input.size() ; i ++){
+            String item = input.get(i);
+            List<String> copy = new ArrayList<>(input);
+            if(item.equals("+")){
+                List<String> copy2 = new ArrayList<>(input);
+                Integer pre = Integer.valueOf(input.get(i - 1));
+                Integer next = Integer.valueOf(input.get(i + 1));
+                copy.remove(i-1);
+                copy.remove(i-1);
+                copy.set(i-1, String.valueOf(pre + next));
+                help241(copy,res,--times);
+                input = copy2;
+            }
+            else if(item.equals("-")){
+                List<String> copy2 = new ArrayList<>(input);
+                Integer pre = Integer.valueOf(input.get(i - 1));
+                Integer next = Integer.valueOf(input.get(i + 1));
+                copy.remove(i-1);
+                copy.remove(i-1);
+                copy.set(i-1, String.valueOf(pre - next));
+                help241(copy,res,--times);
+                input = copy2;
+            }
+            else if(item.equals("*")){
+                List<String> copy2 = new ArrayList<>(input);
+                Integer pre = Integer.valueOf(input.get(i - 1));
+                Integer next = Integer.valueOf(input.get(i + 1));
+                copy.remove(i-1);
+                copy.remove(i-1);
+                copy.set(i-1, String.valueOf(pre * next));
+                help241(copy,res,--times);
+                input = copy2;
+            }
+        }
+    }
+
+    public List<Integer> diffWaysToComputeII(String input) {
+        List<Integer> res = new LinkedList<>();
+        for(int i = 0 ; i < input.length() ; i ++){
+            char cmd = input.charAt(i);
+            if(cmd == '+' || cmd == '-' || cmd == '*'){
+                List<Integer> left = diffWaysToCompute(input.substring(0 , i));
+                List<Integer> right = diffWaysToCompute(input.substring(i + 1));
+                for(int l : left){
+                    for(int r : right){
+                        if(cmd == '+')
+                            res.add(l + r);
+                        else if(cmd == '-')
+                            res.add(l - r);
+                        else if(cmd == '*')
+                            res.add(l * r);
+                    }
+                }
+
+            }
+        }
+        if(res.size() == 0)
+            res.add(Integer.valueOf(input));
+        return res;
+    }
+
 }

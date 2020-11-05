@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="09fc045e-c520-4d70-b694-2f229905b392" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/summer2019/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/summer2019/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,6 +148,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -263,6 +274,7 @@
       <workItem from="1604020795537" duration="4277000" />
       <workItem from="1604119078161" duration="3744000" />
       <workItem from="1604462841375" duration="2189000" />
+      <workItem from="1604540404378" duration="3367000" />
     </task>
     <task id="LOCAL-00001" summary="8.11">
       <created>1597119741458</created>
@@ -326,22 +338,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="以前做的推上去" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1604464805223">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1604543157285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1604464805223">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604543157285" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1604543157285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1604464805223">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604543157285" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1604543157285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1604464805223">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604543157285" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1604543157285">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604543157285" />
     <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1604464466640">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
