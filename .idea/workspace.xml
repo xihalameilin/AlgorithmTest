@@ -22,6 +22,7 @@
     <list default="true" id="09fc045e-c520-4d70-b694-2f229905b392" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/summer2019/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/summer2019/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,19 +35,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>first</find>
-      <find>20</find>
-      <find>11</find>
-      <find>put</find>
-      <find>putVal</find>
-      <find>main</find>
-      <find>||</find>
-      <find>rob</find>
-      <find>combination</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,13 +86,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TCPClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="socket.tcp.TCPClient" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="summer2019.Main" />
       <module name="AlgorithmTest" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="socket.tcp.*" />
+          <option name="PATTERN" value="summer2019.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,17 +148,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -197,19 +174,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TCPClient" />
       <item itemvalue="Application.TCPServer2" />
       <item itemvalue="Application.TCPClient1" />
       <item itemvalue="Application.TCPClient2" />
       <item itemvalue="Application.LeetCodePraticeIII" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LeetCodePraticeIII" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.TCPClient1" />
         <item itemvalue="Application.TCPClient2" />
         <item itemvalue="Application.TCPServer2" />
-        <item itemvalue="Application.TCPClient" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +261,8 @@
       <workItem from="1603951074712" duration="1012000" />
       <workItem from="1603970100764" duration="5135000" />
       <workItem from="1604020795537" duration="4277000" />
-      <workItem from="1604119078161" duration="3400000" />
+      <workItem from="1604119078161" duration="3744000" />
+      <workItem from="1604462841375" duration="2189000" />
     </task>
     <task id="LOCAL-00001" summary="8.11">
       <created>1597119741458</created>
@@ -348,22 +326,38 @@
     <option name="LAST_COMMIT_MESSAGE" value="以前做的推上去" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1604025662214">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom" timestamp="1604464805223">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604025662214" />
-    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1604025662213">
+    <state width="2517" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
+    <state width="2517" height="401" key="GridCell.Tab.0.center" timestamp="1604464805223">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604025662213" />
-    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1604025662213">
+    <state width="2517" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
+    <state width="2517" height="401" key="GridCell.Tab.0.left" timestamp="1604464805223">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604025662213" />
-    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1604025662213">
+    <state width="2517" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right" timestamp="1604464805223">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604025662213" />
+    <state width="2517" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604464805223" />
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom" timestamp="1604464466640">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1604464466640" />
+    <state width="2517" height="492" key="GridCell.Tab.1.center" timestamp="1604464466639">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.center/0.0.2560.1400@0.0.2560.1400" timestamp="1604464466639" />
+    <state width="2517" height="492" key="GridCell.Tab.1.left" timestamp="1604464466639">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.left/0.0.2560.1400@0.0.2560.1400" timestamp="1604464466639" />
+    <state width="2517" height="492" key="GridCell.Tab.1.right" timestamp="1604464466639">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2517" height="492" key="GridCell.Tab.1.right/0.0.2560.1400@0.0.2560.1400" timestamp="1604464466639" />
     <state x="781" y="344" key="SettingsEditor" timestamp="1603979783054">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

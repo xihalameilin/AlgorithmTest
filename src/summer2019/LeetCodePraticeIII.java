@@ -559,10 +559,6 @@ public class LeetCodePraticeIII {
     }
 
 
-    public static void main(String[] args) {
-
-        new LeetCodePraticeIII().productExceptSelf(new int[]{1, 2, 3, 4});
-    }
 
     //238
     public int[] productExceptSelf(int[] nums) {
@@ -591,6 +587,32 @@ public class LeetCodePraticeIII {
         for(int i = len - 1 ; i >= 0 ; --i ){
             res[i] = res[i] * R;
             R = R * nums[i];
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+
+        new LeetCodePraticeIII().maxSlidingWindow(new int[]{7, 2, 4},2);
+    }
+    //239
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        if(nums == null || nums.length == 0)
+            return nums;
+        ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
+        int[] res = new int[nums.length - k + 1];
+        for(int i = 0 ; i < nums.length ; i++){
+            int temp = nums[i];
+            while(!arrayDeque.isEmpty() && arrayDeque.peekLast() < temp){
+                arrayDeque.pollLast();
+            }
+            arrayDeque.offerLast(temp);
+            arrayDeque.forEach(System.out::print);
+            System.out.println();
+           if(i >= k && nums[i - k] == arrayDeque.peekFirst())
+                arrayDeque.pollFirst();
+            if(i >= k - 1)
+                res[i - k + 1] = arrayDeque.peekFirst();
         }
         return res;
     }
