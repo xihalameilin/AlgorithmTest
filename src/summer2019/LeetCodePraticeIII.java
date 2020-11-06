@@ -3,6 +3,7 @@ package summer2019;
 import sun.applet.AppletResourceLoader;
 import sun.reflect.generics.tree.Tree;
 
+import javax.print.attribute.HashPrintServiceAttributeSet;
 import java.util.*;
 
 public class LeetCodePraticeIII {
@@ -637,10 +638,6 @@ public class LeetCodePraticeIII {
     }
 
 
-    public static void main(String[] args) {
-
-        new LeetCodePraticeIII().diffWaysToCompute(new String("2*3-4*5"));
-    }
     //241
     public List<Integer> diffWaysToCompute(String input) {
         List<Integer> res = new ArrayList<>();
@@ -734,4 +731,473 @@ public class LeetCodePraticeIII {
         return res;
     }
 
+
+    //242
+    public boolean isAnagram(String s, String t) {
+        if(s.length() != t.length())
+            return false;
+        Map<Character,Integer> map = new HashMap<>();
+        for(int i = 0 ; i < t.length() ; i ++){
+            if(!map.containsKey(t.charAt(i))){
+                map.put(t.charAt(i), 0);
+            }
+            map.put(t.charAt(i),map.get(t.charAt(i))+1);
+        }
+        for(int i = 0 ; i < s.length() ; i ++){
+            if(!map.containsKey(s.charAt(i)))
+                return false;
+            if(map.get(s.charAt(i)) == 0)
+                return false;
+            map.put(s.charAt(i),map.get(s.charAt(i))-1);
+        }
+        return true;
+    }
+
+    //257
+    public List<String> binaryTreePaths(TreeNode root) {
+        List<String> res = new ArrayList<>();
+        help257(res,root,new StringBuilder());
+        return res;
+    }
+
+    private void help257(List<String> res,TreeNode root,StringBuilder path){
+        if(root == null)
+            return;
+        path.append(root.val);
+        if(root.left == null && root.right == null)
+            res.add(path.toString());
+        else{
+            help257(res,root.left,new StringBuilder(path).append("->"));
+            help257(res,root.right,new StringBuilder(path).append("->"));
+        }
+    }
+
+
+    //257
+    public List<String> binaryTreePathsII(TreeNode root) {
+        List<String> res = new ArrayList<>();
+        if(root == null)
+            return res;
+        Queue<TreeNode> nodeQueue = new LinkedList<>();
+        Queue<String> pathQueue = new LinkedList<>();
+        nodeQueue.add(root);
+        pathQueue.add(String.valueOf(root.val));
+        while(!nodeQueue.isEmpty()){
+            TreeNode node = nodeQueue.poll();
+            String path = pathQueue.poll();
+              if (node.left == null && node.right == null)
+                  res.add(path);
+              else {
+                    if(node.left != null) {
+                      nodeQueue.offer(node.left);
+                      pathQueue.offer(new StringBuilder(path).append("->").append(node.left.val).toString());
+                    }
+                    if(node.right != null) {
+                      nodeQueue.offer(node.right);
+                      pathQueue.offer(new StringBuilder(path).append("->").append(node.right.val).toString());
+                    }
+                    }
+        }
+        return res;
+    }
+
+    //258
+    public int addDigits(int num) {
+        return (num - 1) % 9 + 1;
+    }
+
+    //260
+    public int[] singleNumber(int[] nums) {
+        int num1 = 0;
+        int num2 = 0;
+        int res = 0;
+        for(int i : nums)
+            res ^= i;
+        int bit = 1;
+        while((res & bit) == 0){
+            bit <<= 1;
+        }
+        for(int i : nums){
+            if((i & bit) == 0)
+                num1 ^= i;
+            else
+                num2 ^= i;
+        }
+        return new int[]{num1,num2};
+    }
+
+
+    //263
+    public boolean isUgly(int num) {
+        if(num <= 0)
+            return false;
+        while(num%2 == 0)
+            num /= 2;
+        while(num%3 == 0)
+            num /= 3;
+        while(num%5 == 0)
+            num /= 5;
+        return num == 1;
+    }
+
+
+    //264
+    public int nthUglyNumber(int n) {
+        int[] dp = new int[n];
+        dp[0] = 1;
+        for(int i = 1 ; i < n ;i ++){
+            dp[i] = Integer.MAX_VALUE;
+            for(int j = 0 ; j < i ; j ++){
+                if(dp[j] * 2 > dp[i-1]){
+                    dp[i] = Math.min(dp[i] , dp[j] * 2);
+                }
+                if(dp[j] * 3 > dp[i-1]){
+                    dp[i] = Math.min(dp[i] , dp[j] * 3);
+                }
+                if(dp[j] * 5 > dp[i-1]){
+                    dp[i] = Math.min(dp[i] , dp[j] * 5);
+                }
+            }
+        }
+        return dp[n-1];
+    }
+
+
+    public int nthUglyNumberII(int n) {
+        int[] idx = new int[]{0,0,0};
+        int[] dp = new int[n];
+        Arrays.fill(dp,1);
+        for(int i = 1 ; i < n ; i ++){
+            int a = dp[idx[0]] * 2;
+            int b = dp[idx[1]] * 3;
+            int c = dp[idx[2]] * 5;
+            dp[i] = Math.min(Math.min(a,b),c);
+            if(dp[i] == a)
+                idx[0] ++;
+            if(dp[i] == b)
+                idx[1] ++;
+            if(dp[i] == c)
+                idx[2] ++;
+         }
+        return dp[n-1];
+    }
+
+
+    //268
+    public int missingNumber(int[] nums) {
+        int sum = 0;
+        for(int i = 1 ; i <= nums.length ; i ++){
+            sum += i;
+            sum -= nums[i-1];
+        }
+        return sum;
+    }
+
+    public int missingNumberII(int[] nums) {
+        int missing = nums.length;
+        for(int i = 0 ; i < nums.length ; i ++){
+            missing ^= i^nums[i];
+        }
+        return missing;
+    }
+
+    public static void main(String[] args) {
+
+        new LeetCodePraticeIII().numberToWords(1234567891);
+
+    }
+    //273
+    public String numberToWords(int num) {
+        String s = String.valueOf(num);
+        String[] level = new String[]{""," Thousand "," Million "," Billion "};
+        String res = new String();
+        int times = 0;
+        for(int i = s.length() ; i >0 ; i -= 3){
+            int left = i - 3 < 0 ? 0 : i - 3 ;
+            String sub = s.substring(left,i);
+            System.out.println(sub);
+            String temp = dealThreeBit(sub)+level[times];
+            times ++;
+            res = temp + res;
+        }
+        System.out.println(res);
+        return res.trim();
+    }
+
+    private String dealThreeBit(String s){
+        if(s.length() == 1)
+            return singleNum(s);
+        //两位
+        else if(s.length() == 2){
+            if(Integer.valueOf(s) < 20){
+                return string2num3(s);
+            }
+            else {
+                String shi = s.substring(0,1);
+                String ge = s.substring(1,2);
+                if(ge.equals("0")){
+                    return string2num2(shi).trim();
+                }
+                return string2num2(shi) + singleNum(ge);
+            }
+        }
+        //三位
+        else{
+            String bai = s.substring(0,1);
+
+            String res = string2num1(bai);
+            String temp = new String();
+            if(Integer.valueOf(s.substring(1)) < 20){
+                temp = string2num3(s.substring(1));
+            }
+            else if(Integer.valueOf(s.substring(2)) == 0){
+                return string2num2(s.substring(1,2));
+            }
+            else {
+                String shi = s.substring(1,2);
+                String ge = s.substring(2,3);
+                temp = string2num2(shi) + singleNum(ge);
+            }
+            return res +" " +temp;
+        }
+    }
+
+    //百位
+    private String string2num1(String s){
+        return singleNum(s)+" Hundred";
+    }
+
+    //十位
+    private String string2num2(String s){
+        String res = new String();
+        switch (s){
+            case "2":
+                res = "Twenty ";
+                break;
+            case "3":
+                res = "Thirty ";
+                break;
+            case "4":
+                res = "Forty ";
+                break;
+            case "5":
+                res = "Fifty ";
+                break;
+            case "6":
+                res = "Sixty ";
+                break;
+            case "7":
+                res = "Seventy ";
+                break;
+            case "8":
+                res = "Eighty ";
+                break;
+            case "9":
+                res = "Ninety ";
+                break;
+        }
+        return res;
+    }
+    private String string2num3(String s){
+        String res = new String();
+        if(0<Integer.valueOf(s)&&Integer.valueOf(s)<10)
+            return singleNum(s);
+        switch (s){
+            case "1":
+                res = "One";
+                break;
+            case "2":
+                res = "Two";
+                break;
+            case "3":
+                res = "Three";
+                break;
+            case "4":
+                res = "Four";
+                break;
+            case "5":
+                res = "Five";
+                break;
+            case "6":
+                res = "Six";
+                break;
+            case "7":
+                res = "Seven";
+                break;
+            case "8":
+                res = "Eight";
+                break;
+            case "9":
+                res = "Nine";
+                break;
+            case "10":
+                res = "Ten";
+                break;
+            case "11":
+                res = "Eleven";
+                break;
+            case "12":
+                res = "Twelve";
+                break;
+            case "13":
+                res = "Thirteen";
+                break;
+            case "14":
+                res = "Fourteen";
+                break;
+            case "15":
+                res = "Fifteen";
+                break;
+            case "16":
+                res = "Sixteen";
+                break;
+            case "17":
+                res = "Seventeen";
+                break;
+            case "18":
+                res = "Eighteen";
+                break;
+            case "19":
+                res = "nineteen";
+                break;
+        }
+        return res;
+    }
+
+
+    private String singleNum(String s){
+        String res = new String();
+        switch (s){
+            case "0":
+                res = "Zero";
+                break;
+            case "1":
+                res = "One";
+                break;
+            case "2":
+                res = "Two";
+                break;
+            case "3":
+                res = "Three";
+                break;
+            case "4":
+                res = "Four";
+                break;
+            case "5":
+                res = "Five";
+                break;
+            case "6":
+                res = "Six";
+                break;
+            case "7":
+                res = "Seven";
+                break;
+            case "8":
+                res = "Eight";
+                break;
+            case "9":
+                res = "Nine";
+                break;
+        }
+        return res;
+    }
+
+    public String numberToWordsII(int num) {
+        if(num==0){
+            return "Zero";
+        }
+        int part1 = num%1000;
+        num = num/1000;
+        int part2 = num%1000;
+        num = num/1000;
+        int part3 = num%1000;
+        num = num/1000;
+        int part4 = num;
+        String ans = "";
+        if(part4!=0){
+            ans = dealThreeBits(part4) + "Billion ";
+        }
+        if(part3!=0){
+            ans = ans + dealThreeBits(part3) + "Million ";
+        }
+        if(part2!=0){
+            ans = ans + dealThreeBits(part2) + "Thousand ";
+        }
+        if(part1!=0){
+            ans = ans + dealThreeBits(part1);
+        }
+        return ans.trim();
+    }
+
+    private String dealThreeBits(int num){
+        String[] low = {"","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+        String[] mid = {"Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
+        String[] high = {"","","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"};
+        int ge = num%10;
+        num /= 10;
+        int shi = num%10;
+        num /= 10;
+        int bai = num%10;
+
+        String res = new String();
+        if(bai != 0)
+            res += low[bai] + " Hundred ";
+        if(shi == 0)
+            res += low[ge];
+        else if(shi == 1)
+            res += mid[ge];
+        else
+            res += high[shi] + " " + low[ge];
+        return res.trim() + " ";
+
+    }
+
+    //274
+    public int hIndex(int[] citations) {
+        Map<Integer,Integer> map = new HashMap<>();
+        for(int i = 0 ; i < citations.length ; i ++){
+            for(int j = 0 ; j <= citations[i] ; j ++){
+                map.put(j,map.getOrDefault(j,0)+1);
+            }
+        }
+        int res = 0;
+        for(int i = citations.length ; i >= 0 ; i ++){
+            if(map.get(i) != null && map.get(i) >= i){
+                res = i;
+                break;
+            }
+
+        }
+        return res;
+    }
+
+      public int hIndexII(int[] citations) {
+        Arrays.sort(citations);
+        int h = citations.length;
+        for (int i = 0; i < citations.length; i++) {
+          // 比较小于则 h-1
+          if (citations[i] < h) {
+            h--;
+          }
+        }
+        return h;
+    }
+
+    //275
+    public int hIndexIII(int[] citations) {
+        int left = 0;
+        int right = citations.length-1;
+        int res = 0 ;
+        while(left <= right){
+            int mid = left + (right - left) / 2;
+            if(citations[mid] > citations.length - mid ){
+                right = mid;
+                res = citations.length - mid;
+            }
+            else{
+                left = mid + 1;
+            }
+        }
+        return res;
+    }
 }
