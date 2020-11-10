@@ -9,3 +9,23 @@
 ###### 264 求丑数(2，3，5乘积) 三指针法 动态规划bug尚未解决
 ###### 268 找n维数组未出现的唯一值 异或  公式求和减去每个数
 ###### 274 排序数组H指数 二分法 条件判断(l<=r) l=mid+1 r=mid-1
+###### 278 第一个错误版本 l<r 注意:l = mid + 1 (结果一定在右边) r = mid(结果可能就是自己,不能减1)
+```java
+class Solution{
+    public int firstBadVersion(int n) {
+            int left = 1;
+            int right = n ;
+            while(left < right){
+                int mid = left + ((right - left) >> 1);
+                if(!isBadVersion(mid)){
+                    left = mid;
+                }
+                else{
+                    right = mid - 1;
+                }
+    
+            }
+            return left;
+        }
+}
+```

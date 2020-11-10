@@ -1200,4 +1200,54 @@ public class LeetCodePraticeIII {
         }
         return res;
     }
+
+    boolean isBadVersion(int version){
+        return false;
+    }
+
+    //278
+    public int firstBadVersion(int n) {
+        int left = 1;
+        int right = n ;
+        while(left < right){
+            int mid = left + ((right - left) >> 1);
+            if(!isBadVersion(mid)){
+                left = mid;
+            }
+            else{
+                right = mid - 1;
+            }
+
+        }
+        return left;
+    }
+
+    //279
+    public int numSquares(int n) {
+        int[] dp = new int[n+1];
+        Arrays.fill(dp,Integer.MAX_VALUE);
+        dp[0] = 0;
+        for(int i = 1 ; i * i <= n ; i ++)
+            dp[i] = 1;
+        for(int i = 1 ; i <= n ; i ++){
+            for(int j = 1 ; 2 * j <= i ; j++){
+                dp[i] = Math.min(dp[j] + dp[i-j],dp[i]);
+            }
+        }
+        return dp[n];
+    }
+
+
+    //283
+    public void moveZeroes(int[] nums) {
+        int count = 0;
+        for(int i = 0 ; i < nums.length ; i++){
+            if(nums[i] == 0)
+                count ++;
+            else
+                nums[i-count] = nums[i];
+        }
+        for(int i = nums.length - count; i < nums.length ; i++)
+            nums[i] = 0;
+    }
 }
