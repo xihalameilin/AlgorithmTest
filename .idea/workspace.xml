@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8131a8c-07a7-4190-893a-119c20ab901b" name="Default" comment="socket">
-      <change beforePath="" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII$ListNode.class" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII$ListNode.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII$TreeNode.class" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII$TreeNode.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII.class" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/LeetCodePraticeIII.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Main.class" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/summer2019/Main.class" />
       <change beforePath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" afterPath="$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java" />
-      <change beforePath="$PROJECT_DIR$/src/summer2019/Main.java" afterPath="$PROJECT_DIR$/src/summer2019/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +30,8 @@
       <file leaf-file-name="LeetCodePraticeIII.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="1340" column="4" lean-forward="false" selection-start-line="1340" selection-start-column="4" selection-end-line="1340" selection-end-column="4" />
+            <state relative-caret-position="767">
+              <caret line="1418" column="19" lean-forward="true" selection-start-line="1402" selection-start-column="7" selection-end-line="1418" selection-end-column="19" />
               <folding>
                 <element signature="e#36845#36846#0" expanded="true" />
                 <element signature="e#36875#36876#0" expanded="true" />
@@ -62,8 +55,8 @@
       <file leaf-file-name="Codec.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/summer2019/Codec.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="2160">
+              <caret line="80" column="5" lean-forward="false" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2343#2344#0" expanded="true" />
@@ -79,11 +72,7 @@
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="1404">
                 <caret line="52" column="3" lean-forward="false" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-                <folding>
-                  <marker date="1605856065968" expanded="true" signature="524:889" ph="{...}" />
-                  <marker date="1605856065968" expanded="true" signature="1079:1463" ph="{...}" />
-                  <marker date="1605856065968" expanded="true" signature="1079:1465" ph="{...}" />
-                </folding>
+                <folding />
               </first_editor>
               <second_editor />
             </state>
@@ -179,10 +168,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,6 +191,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -499,6 +488,7 @@
       <workItem from="1604465933688" duration="928000" />
       <workItem from="1606118396041" duration="3951000" />
       <workItem from="1607998241855" duration="51000" />
+      <workItem from="1608000078667" duration="1978000" />
     </task>
     <task id="LOCAL-00001" summary="8.11">
       <created>1597119741458</created>
@@ -539,7 +529,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159060000" />
+    <option name="totallyTimeSpent" value="161038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -552,12 +542,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3945268" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29874572" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3945268" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16201717" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16416308" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -565,8 +555,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -944,11 +934,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="1404">
             <caret line="52" column="3" lean-forward="false" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
-            <folding>
-              <marker date="1605856065968" expanded="true" signature="524:889" ph="{...}" />
-              <marker date="1605856065968" expanded="true" signature="1079:1463" ph="{...}" />
-              <marker date="1605856065968" expanded="true" signature="1079:1465" ph="{...}" />
-            </folding>
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -966,8 +952,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/summer2019/Codec.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+        <state relative-caret-position="2160">
+          <caret line="80" column="5" lean-forward="false" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2343#2344#0" expanded="true" />
@@ -978,8 +964,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/summer2019/LeetCodePraticeIII.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="1340" column="4" lean-forward="false" selection-start-line="1340" selection-start-column="4" selection-end-line="1340" selection-end-column="4" />
+        <state relative-caret-position="767">
+          <caret line="1418" column="19" lean-forward="true" selection-start-line="1402" selection-start-column="7" selection-end-line="1418" selection-end-column="19" />
           <folding>
             <element signature="e#36845#36846#0" expanded="true" />
             <element signature="e#36875#36876#0" expanded="true" />

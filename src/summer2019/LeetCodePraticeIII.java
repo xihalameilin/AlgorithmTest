@@ -1339,4 +1339,86 @@ public class LeetCodePraticeIII {
     }
 
 
+    //299
+    public String getHint(String secret, String guess) {
+        if(secret.length() != guess.length())
+            return "0A0B";
+        int count  = 0;
+        int countOfDuplicate = 0;
+        Map<Character,Integer> map1 = new HashMap();
+        Map<Character,Integer> map2 = new HashMap();
+        for(int i = 0 ; i < secret.length() ; i ++){
+            Character c1 = secret.charAt(i);
+            Character c2 = guess.charAt(i);
+            if(c1 == c2){
+                count ++;
+            }
+            map1.put(c1,map1.getOrDefault(c1,0)+1);
+            map2.put(c2,map2.getOrDefault(c2,0)+1);
+        }
+        for(Map.Entry<Character,Integer> entry : map1.entrySet()){
+            Character key = entry.getKey();
+            int value = entry.getValue();
+            if(map2.containsKey(key)){
+                countOfDuplicate += Math.min(value,map2.get(key));
+            }
+        }
+        return count+"A"+(countOfDuplicate-count)+"B";
+    }
+
+    public String getHintII(String secret, String guess) {
+        int correct = 0;
+        int[] secretArray = new int[10];
+        int[] guessArray = new int[10];
+        for(int i = 0 ; i < secret.length() ; i ++){
+            secretArray[secret.charAt(i) - '0']++;
+            guessArray[guess.charAt(i) - '0']++;
+            correct += secret.charAt(i) == guess.charAt(i)?1:0;
+        }
+        int count = 0;
+        for(int i = 0 ; i < 10 ; i++){
+            count += Math.min(secretArray[i],guessArray[i]);
+        }
+        return correct+"A"+(count-correct)+"B";
+    }
+
+
+
+    //300 最长增长子序列
+    public int lengthOfLIS(int[] nums) {
+        int max = 0;
+        int[] dp = new int[nums.length];
+        for(int i = 0 ; i < dp.length ; i ++){
+            for (int j = 0 ; j < i ; j++){
+                if(dp[i] > dp[j]){
+                    dp[i] = Math.max(dp[i],dp[j] + 1);
+                    max = Math.max(max,dp[i]);
+                }
+            }
+        }
+        return max+1;
+    }
+
+    //o(NlogN)
+    public int lengthOfLISII(int[] nums) {
+        int[] tail = new int[nums.length];
+        int res = 0;
+        for(int num : nums){
+            int i = 0 ;
+            int j = res;
+            while( i < j ){
+                int m = ( i + j ) / 2;
+                if( tail[m] < num)
+                    i = m + 1;
+                else
+                    j = m;
+            }
+            tail[i] = num;
+            if(res == j)
+                res++;
+        }
+        return res;
+    }
+
+
 }
