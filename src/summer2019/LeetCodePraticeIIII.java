@@ -112,4 +112,47 @@ public class LeetCodePraticeIIII {
             return dp[row2 + 1][col2 + 1] + dp[row1][col1] - dp[row1][col2 + 1] - dp[row2 + 1][col1];
         }
     }
+
+    //307 线段数组  参考https://blog.csdn.net/Yaokai_AssultMaster/article/details/79492190
+    class NumArrayIII {
+        int[] nums;
+        int[] sums;
+        public NumArrayIII(int[] nums) {
+            this.nums = nums;
+            this.sums = new int[nums.length + 1];
+            for(int i = 0 ; i < nums.length ; i++){
+                updateTree(i + 1,nums[i]);
+            }
+        }
+
+        public void update(int i, int val) {
+            updateTree(i + 1,val-nums[i]);
+            nums[i] = val;
+        }
+
+        public int sumRange(int i, int j) {
+            return query(j + 1) - query(i);
+        }
+
+        private void updateTree(int index,int val){
+            while(index < sums.length){
+                sums[index] += val ;
+                index += and(index);
+            }
+
+        }
+
+        private int query(int i){
+            int res = 0;
+            while(i > 0){
+                res += sums[i];
+                i -= and(i);
+            }
+            return res;
+        }
+
+        private int and(int x){
+            return x & (-x);
+        }
+    }
 }
