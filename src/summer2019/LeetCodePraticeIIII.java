@@ -155,4 +155,39 @@ public class LeetCodePraticeIIII {
             return x & (-x);
         }
     }
+
+
+    //309
+    public int maxProfit(int[] prices) {
+        if(prices.length < 2)
+            return 0;
+        int[] sell = new int[prices.length];
+        int[] buy = new int[prices.length];
+        buy[0] = -prices[0];
+        buy[1] = Math.max(-prices[0], -prices[1]);
+        sell[0] = 0;
+        sell[1] = Math.max(0, prices[1] - prices[0]);
+        for(int i = 2; i < prices.length ; i++){
+            buy[i] = Math.max(sell[i-2] - prices[i],buy[i-1]);
+            sell[i] = Math.max(buy[i-1] + prices[i],sell[i-1]);
+        }
+        return sell[prices.length-1];
+     }
+
+
+     //dp 思路：第i天结束有股票  1 无股票，冷却  2 无股票，无冷却
+    public int maxProfitII(int[] prices) {
+        int[][] dp = new int[prices.length][3];
+        if(prices.length < 2)
+            return 0;
+        dp[0][0] = -prices[0];
+        for(int i = 1 ; i < prices.length ; i++){
+            dp[i][0] = Math.max(dp[i-1][0], dp[i-1][2] - prices[i]);
+            dp[i][1] = dp[i-1][0] + prices[i];
+            dp[i][2] = Math.max(dp[i-1][1],dp[i-1][2]);
+        }
+        return Math.max(dp[prices.length-1][1],dp[prices.length-1][2]);
+    }
+
+
 }
