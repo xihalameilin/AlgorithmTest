@@ -1,10 +1,7 @@
 package summer2019;
 
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 //300开始
 public class LeetCodePraticeIIII {
@@ -187,6 +184,125 @@ public class LeetCodePraticeIIII {
             dp[i][2] = Math.max(dp[i-1][1],dp[i-1][2]);
         }
         return Math.max(dp[prices.length-1][1],dp[prices.length-1][2]);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("111");
+        int[][] edges = new int[5][2];
+        edges[0][0] = 3;
+        edges[0][1] = 0;
+        edges[1][0] = 3;
+        edges[1][1] = 1;
+        edges[2][0] = 3;
+        edges[2][1] = 2;
+        edges[3][0] = 3;
+        edges[3][1] = 4;
+        edges[4][0] = 5;
+        edges[4][1] = 4;
+        new LeetCodePraticeIIII().findMinHeightTreesII(6,edges).forEach(i -> System.out.println(i));
+    }
+
+    //310
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+        List<Integer> res = new ArrayList<>();
+        int min = Integer.MAX_VALUE;
+        for(int i = 0 ; i < n ; i++){
+            int height = help310(edges,i,n);
+            if(height < min){
+                res.clear();
+                res.add(i);
+                min = height;
+            }
+            else if(height == min){
+                res.add(i);
+            }
+        }
+        return res;
+    }
+
+    private int help310(int[][] edges,int root,int n){
+        int height = 0;
+        Boolean[] visited = new Boolean[n];
+        Arrays.fill(visited,false);
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(root);
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            while(size > 0) {
+                int cur = queue.poll();
+                visited[cur] = true;
+                List<Integer> candidate = getCandidate(edges, cur,visited);
+                for (Integer i : candidate) {
+                    queue.offer(i);
+                }
+                size--;
+            }
+            height++;
+        }
+        return height;
+    }
+
+    private List<Integer> getCandidate(int[][] edges,int cur,Boolean[] visited){
+        List<Integer> res = new ArrayList<>();
+        for(int i = 0 ;i < edges.length ; i++){
+            if(edges[i][0] == cur && visited[edges[i][1]] == false){
+                res.add(edges[i][1]);
+            }
+            else if(edges[i][1] == cur && visited[edges[i][0]] == false){
+                res.add(edges[i][0]);
+            }
+        }
+        return res;
+    }
+
+
+
+    // 不断去掉子节点 使得最后只剩下<=2个节点
+    public List<Integer> findMinHeightTreesII(int n, int[][] edges) {
+        List<Integer> res = new ArrayList<>();
+        int[] indegrees = new int[n];
+        boolean[][] graph = new boolean[n][n];
+        boolean[] visited = new boolean[n];
+        for(int i = 0 ; i < edges.length ; i++){
+            int x = edges[i][0];
+            int y = edges[i][1];
+            indegrees[x]++;
+            indegrees[y]++;
+            graph[x][y] = true;
+            graph[y][x] = true;
+        }
+        while(n>2){
+            List<Integer> candidate = getCandidata(indegrees);
+            System.out.println("-----------");
+            for(int i = 0 ; i < candidate.size(); i ++){
+                int cur = candidate.get(i);
+                indegrees[cur]--;
+                visited[cur] = true;
+                n--;
+                for(int j = 0 ; j < graph[cur].length ; j++){
+                    if(graph[cur][j]){
+                        graph[cur][j] = false;
+                        graph[j][cur] = false;
+                        indegrees[j]--;
+                    }
+                }
+            }
+        }
+
+        for(int i = 0 ; i < visited.length ; i ++){
+            if(!visited[i])
+                res.add(i);
+        }
+        return res;
+    }
+
+    private List<Integer> getCandidata(int[] indegrees){
+        List<Integer> res = new ArrayList<>();
+        for(int i  = 0 ; i < indegrees.length ; i++){
+            if(indegrees[i] == 1)
+                res.add(i);
+        }
+        return res;
     }
 
 
