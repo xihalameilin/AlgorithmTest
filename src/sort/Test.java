@@ -3,7 +3,7 @@ package sort;
 public class Test {
 
     public static void main(String[] args) {
-        insertSort(array);
+        mergeSort(array,0,array.length-1,new int[array.length]);
         print(array);
     }
 
@@ -17,7 +17,7 @@ public class Test {
 
     }
 
-    private static int[] array = {20,18,75,45,60};
+    private static int[] array = {20,8,75,45,60};
 
     public static void print(int[] array){
         for(int a:array){
@@ -41,6 +41,42 @@ public class Test {
             for(int j=i+1;j<array.length;j++){
 
             }
+        }
+    }
+
+    public static void mergeSort(int[] nums,int left,int right,int[] temp){
+        if(left < right){
+            int mid = left + (right - left)/2;
+            mergeSort(nums,left,mid,temp);
+            mergeSort(nums,mid + 1 ,right,temp);
+            merge(nums,left,mid,right,temp);
+        }
+    }
+
+    private static void merge(int[] nums,int left,int mid,int right,int[] temp){
+        int i = left;
+        int j = mid + 1;
+        int t = left;
+        while(i <= mid && j <= right){
+            if(nums[i] <= nums[j]){
+                temp[t++] = nums[i++];
+            }
+            else{
+                temp[t++] = nums[j++];
+            }
+        }
+
+
+        while(i <= mid){
+            temp[t++] = nums[i++];
+        }
+
+        while(j <= right){
+            temp[t++] = nums[j++];
+        }
+
+        for(int k = left; k <= right ; k++){
+            nums[k] = temp[k];
         }
     }
 }
