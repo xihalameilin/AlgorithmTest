@@ -26,7 +26,7 @@ package offer.leetcode.editor.cn;
 // Related Topics 位运算 分治算法 
 // 👍 100 👎 0
 
-public class ShuZuZhongChuXianCiShuChaoGuoYiBanDeShuZiLcof{
+ class ShuZuZhongChuXianCiShuChaoGuoYiBanDeShuZiLcof{
     public static void main(String[] args) {
         Solution solution = new ShuZuZhongChuXianCiShuChaoGuoYiBanDeShuZiLcof().new Solution();
         

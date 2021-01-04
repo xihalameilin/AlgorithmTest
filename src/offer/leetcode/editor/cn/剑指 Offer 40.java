@@ -27,7 +27,7 @@ package offer.leetcode.editor.cn;
 
 import java.util.PriorityQueue;
 
-public class ZuiXiaoDeKgeShuLcof{
+class ZuiXiaoDeKgeShuLcof{
     public static void main(String[] args) {
         Solution solution = new ZuiXiaoDeKgeShuLcof().new Solution();
         
