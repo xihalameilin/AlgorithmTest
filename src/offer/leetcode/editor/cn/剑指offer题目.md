@@ -741,3 +741,208 @@
   ```
 
   
+
+
+
+## 36. 二叉搜索树与双向链表
+
+- 中序遍历的模版
+
+  ```java
+  private void midOrder(Node node){
+          if(node == null)
+              return;
+          midOrder(node.left);
+          System.out.print(node);
+          midOrder(node.right);
+      }
+  ```
+
+  
+
+- 中序遍历，再处理左右节点的引用
+
+  ```java
+    /**
+       执行用时：1 ms, 在所有 Java 提交中击败了18.74%的用户
+       内存消耗：37.7 MB, 在所有 Java 提交中击败了83.32%的用户
+       */
+      private List<Node> list = new ArrayList<>();
+      public Node treeToDoublyList(Node root) {
+          if(root == null)
+              return null;
+          midOrder(root);
+          for(int i = 0 ; i < list.size() ; i++){
+              int left = i == 0 ? list.size() - 1 : i - 1;
+              int right = i == list.size() - 1 ? 0 : i + 1;
+              list.get(i).left = list.get(left);
+              list.get(i).right = list.get(right);
+          }
+          return list.get(0);
+      }
+  
+      private void midOrder(Node node){
+          if(node != null) {
+              midOrder(node.left);
+              list.add(node);
+              midOrder(node.right);
+          }
+      }
+  ```
+
+- 直接在中序遍历中修改引用，好好体会中序遍历的过程，理解节点的访问顺序
+
+  ```java
+   /**
+       执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
+       内存消耗：37.8 MB, 在所有 Java 提交中击败了63.26%的用户
+       */
+      private Node head,pre;
+      public Node treeToDoublyList(Node root) {
+          if(root == null)
+              return null;
+          midOrder(root);
+          head.left = pre;
+          pre.right = head;
+          return head;
+      }
+  
+      private void midOrder(Node node){
+          if(node == null)
+              return;
+          midOrder(node.left);
+          // 处理第一个节点
+          if(pre == null)
+              head = node;
+          else{
+              pre.right = node;
+              node.left = pre;
+          }
+          pre = node;
+          midOrder(node.right);
+      }
+  ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## 52.两个链表的第一个公共节点
+
+- 分别求出长度，长的链表先往前走差值
+
+  ```java
+  /**
+       * 执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户
+       内存消耗：41.1 MB, 在所有 Java 提交中击败了82.47%的用户
+       */
+      public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+            int lengthA = getLength(headA);
+            int lengthB = getLength(headB);
+            if(lengthA >lengthB){
+                int step = lengthA -lengthB;
+                while(step-- > 0){
+                    headA = headA.next;
+                }
+            }
+            else {
+                int step = lengthB -lengthA;
+                while(step-- > 0){
+                    headB = headB.next;
+                }
+            }
+  
+              while(headA != null && headB != null && headA != headB){
+                  headA = headA.next;
+                  headB = headB.next;
+              }
+              return headA;
+      }
+  
+       private int getLength(ListNode head){
+                int res = 0;
+                while(head != null){
+                    res++;
+                    head = head.next;
+                }
+                return res;
+          }
+  ```
+
+- 浪漫相遇思路
+
+  ```java
+   /**
+       执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户
+       内存消耗：41.2 MB, 在所有 Java 提交中击败了67.13%的用户
+       */
+      public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+            ListNode h1 = headA;
+            ListNode h2 = headB;
+            while(h1 != h2){
+                h1 = h1 == null ? headB : h1.next;
+                h2 = h2 == null ? headA : h2.next;
+            }
+            return h1;
+      }
+  ```
+
+
+
+
+
+## 53. 在排序数组中查找数字个数
+
+- 二分，注意：在第一次二分完后如果mid指向的数不是target直接返回
+
+  ```java
+   /**
+       执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
+       内存消耗：41.4 MB, 在所有 Java 提交中击败了43.46%的用户
+       */
+      public int search(int[] nums, int target) {
+          if(nums == null || nums.length == 0)
+              return 0;
+          int low = 0;
+          int high = nums.length - 1;
+          while(low < high){
+              int mid = low + (high - low) / 2;
+              if(nums[mid] >= target){
+                  high = mid;
+              }
+              else {
+                  low = mid + 1;
+              }
+          }
+          
+          // 精髓所在
+          if(nums[low] != target)
+              return 0;
+          int l = low;
+  
+          high = nums.length;
+          while(low < high){
+              int mid = low + (high - low) / 2;
+              if(nums[mid] <= target){
+                  low = mid + 1;
+              }
+              else{
+                  high = mid;
+              }
+          }
+          int r = high;
+          return r - l ;
+      }
+  ```
+
+  

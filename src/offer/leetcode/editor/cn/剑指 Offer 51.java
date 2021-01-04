@@ -43,14 +43,8 @@ class Solution {
         if (len < 2) {
             return 0;
         }
-
-        int[] copy = new int[len];
-        for (int i = 0; i < len; i++) {
-            copy[i] = nums[i];
-        }
-
         int[] temp = new int[len];
-        return mergeSort(copy, 0, len - 1, temp);
+        return mergeSort(nums, 0, len - 1, temp);
     }
 
     private int mergeSort(int[] nums,int left,int right,int[] temp){
@@ -76,20 +70,18 @@ class Solution {
         int j = mid + 1;
 
         int count = 0;
-        for (int k = left; k <= right; k++) {
-
-            if (i == mid + 1) {
-                nums[k] = temp[j];
-                j++;
-            } else if (j == right + 1) {
-                nums[k] = temp[i];
-                i++;
-            } else if (temp[i] <= temp[j]) {
-                nums[k] = temp[i];
-                i++;
-            } else {
-                nums[k] = temp[j];
-                j++;
+        for(int k = left ; k <= right ; k++){
+            if(i == mid + 1){
+                nums[k] = temp[j++];
+            }
+            else if(j == right + 1){
+                nums[k] = temp[i++];
+            }
+            else if(temp[i] <= temp[j]){
+                nums[k] = temp[i++];
+            }
+            else {
+                nums[k] = temp[j++];
                 count += (mid - i + 1);
             }
         }

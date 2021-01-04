@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="03e71b14-8610-4be0-82a3-be5079dcd255" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/剑指offer题目.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 51.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 51.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指offer题目.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1mKRNB3J3MS42JHXPqF3iAN2FPO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/algorithmLession" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AlgorithmTest\src\algorithmLession" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Keliuliang">
+    <configuration name="Heweidingzhishuzu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmLession.Heweidingzhishuzu" />
+      <module name="AlgorithmTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithmLession.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Keliuliang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmLession.Keliuliang" />
+      <module name="AlgorithmTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithmLession.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chongwuwutuse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmLession.chongwuwutuse" />
+      <module name="AlgorithmTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithmLession.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="hebingshuzu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmLession.hebingshuzu" />
+      <module name="AlgorithmTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithmLession.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="xuhaochengfang" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithmLession.xuhaochengfang" />
+      <module name="AlgorithmTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="algorithmLession.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Keliuliang" />
+        <item itemvalue="Application.hebingshuzu" />
+        <item itemvalue="Application.Heweidingzhishuzu" />
+        <item itemvalue="Application.chongwuwutuse" />
+        <item itemvalue="Application.xuhaochengfang" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03e71b14-8610-4be0-82a3-be5079dcd255" name="Default Changelist" comment="" />
+      <created>1609240256074</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609240256074</updated>
+      <workItem from="1609240259042" duration="5098000" />
+      <workItem from="1609292030054" duration="9969000" />
+      <workItem from="1609389386109" duration="3777000" />
+      <workItem from="1609564548613" duration="13257000" />
+      <workItem from="1609725149191" duration="764000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1030" y="229" key="#Auto_Import" timestamp="1609572909712">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1030" y="229" key="#Auto_Import/0.0.2560.1400@0.0.2560.1400" timestamp="1609572909712" />
+    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1609307612115">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1609307612115" />
+    <state width="2516" height="401" key="GridCell.Tab.0.bottom" timestamp="1609583068275">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2516" height="401" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1609583068275" />
+    <state width="2516" height="401" key="GridCell.Tab.0.center" timestamp="1609583068274">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2516" height="401" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1609583068274" />
+    <state width="2516" height="401" key="GridCell.Tab.0.left" timestamp="1609583068274">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2516" height="401" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1609583068274" />
+    <state width="2516" height="401" key="GridCell.Tab.0.right" timestamp="1609583068275">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2516" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1609583068275" />
+    <state x="92" y="92" width="2376" height="1216" key="dock-window-1" timestamp="1609296787708">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="92" y="92" width="2376" height="1216" key="dock-window-1/0.0.2560.1400@0.0.2560.1400" timestamp="1609296787708" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1609569259968">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1609569259968" />
+  </component>
+</project>
