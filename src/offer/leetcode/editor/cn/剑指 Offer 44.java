@@ -28,39 +28,28 @@ package offer.leetcode.editor.cn;
 // 注意：本题与主站 400 题相同：https://leetcode-cn.com/problems/nth-digit/ 
 // Related Topics 数学 
 // 👍 81 👎 0
-public class ShuZiXuLieZhongMouYiWeiDeShuZiLcof{
+ class ShuZiXuLieZhongMouYiWeiDeShuZiLcof{
     public static void main(String[] args) {
         Solution solution = new ShuZiXuLieZhongMouYiWeiDeShuZiLcof().new Solution();
-        solution.findNthDigit(11);
+        System.out.println(solution.findNthDigit(9));
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
 
     public int findNthDigit(int n) {
-        if(n == 0)
-            return 0;
-        int k = 1;
-        int count = 9;
-        while (n >= 0) {
-            n -= k * count;
-            count *= 10;
-            k++;
+        int digit = 1;   // n所在数字的位数
+        long start = 1;  // 数字范围开始的第一个数
+        long count = 9;  // 占多少位
+        // 9  9*2*10
+        while(n > count){
+            n -= count;
+            digit++;
+            start *= 10;
+            count = digit * start * 9;
         }
-        // 落到几位的数
-        k--;
-        count /= 10;
-        n += count * k;
-        count /= 9;
-        System.out.println("count"+count);
-        while (n >= 0) {
-            count++;
-            n -= k;
-        }
-        n += k;
-        count--;
-        System.out.println("count" + count + "n" + n);
-        return Integer.valueOf(String.valueOf(count).charAt(n));
+        long num = start + (n - 1) / digit;
+        return Long.toString(num).charAt((n - 1) % digit) - '0';
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)

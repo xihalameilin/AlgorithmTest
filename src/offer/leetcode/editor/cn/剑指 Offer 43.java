@@ -30,7 +30,7 @@ package offer.leetcode.editor.cn;
 // Related Topics 数学 
 // 👍 121 👎 0
 
-public class OneNzhengShuZhong1chuXianDeCiShuLcof{
+ class OneNzhengShuZhong1chuXianDeCiShuLcof{
     public static void main(String[] args) {
         Solution solution = new OneNzhengShuZhong1chuXianDeCiShuLcof().new Solution();
         
@@ -39,7 +39,7 @@ public class OneNzhengShuZhong1chuXianDeCiShuLcof{
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public int countDigitOne(int n) {
-
+        return 1;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
