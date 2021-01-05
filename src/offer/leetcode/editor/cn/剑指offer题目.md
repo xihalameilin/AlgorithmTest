@@ -284,7 +284,7 @@
           if(B == null || A == null)
               return false;
           // 当前节点能否满足条件 || 左子树满足条件 || 右子树满足条件
-          return help(A,B) || isSubStructure(A.left,B) || 				       isSubStructure(A.right,B);
+          return help(A,B) || isSubStructure(A.left,B) || 				 isSubStructure(A.right,B);
       }
   
       // 判断某个节点开始能否满足条件
@@ -928,9 +928,121 @@
       }
   ```
 
+
+
+
+## 41.数组的中位数
+
+- 两个堆
+
+- 最大堆`PriorityQueue<Integer> maxHeap = new PriorityQueue<>((o1,o2)->{return o2-o1;})`
+
+- 最小堆`PriorityQueue<Integer> minHeap = new PriorityQueue<>()`
+
+  ```java
+  class MedianFinder {
+      /**
+       执行耗时:78 ms,击败了90.91% 的Java用户
+       内存消耗:49.7 MB,击败了47.69% 的Java用户
+       */
+      private PriorityQueue<Integer> minHeap;
+      private PriorityQueue<Integer> maxHeap;
+      /** initialize your data structure here. */
+      public MedianFinder() {
+          minHeap = new PriorityQueue<>();
+          maxHeap = new PriorityQueue<>((o1,o2)->{return o2-o1;});
+      }
+      
+      public void addNum(int num) {
+          if(num < findMedian()){
+              maxHeap.offer(num);
+          }
+          else {
+              minHeap.offer(num);
+          }
+  
+          // 右边多
+          if(maxHeap.size() < minHeap.size()){
+              maxHeap.offer(minHeap.poll());
+          }
+          // 左边比右边多俩
+          else if(maxHeap.size() - minHeap.size() > 1){
+              minHeap.offer(maxHeap.poll());
+          }
+      }
+      
+      public double findMedian() {
+          // 这个位置需要特别处理，第一次调用的时候要返回值
+          if(maxHeap.size() == 0 && minHeap.size() == 0){
+              return 0;
+          }
+          if(maxHeap.size() == minHeap.size())
+              return (maxHeap.peek() + minHeap.peek()) / 2.0;
+          else
+              return maxHeap.peek();
+      }
+  }
+  ```
+
   
 
 
+
+
+
+
+
+## 42.连续子数组的最大和
+
+- 思路：从前往后求和，和为负数就重新设置为当前值
+
+  ```java
+   /**
+       执行耗时:1 ms,击败了98.13% 的Java用户
+       内存消耗:44.9 MB,击败了70.42% 的Java用户
+       */
+      public int maxSubArray(int[] nums) {
+          int curSum = 0;
+          // 这个结果的初始化有讲究的
+          int max = Integer.MIN_VALUE;
+          for(int i : nums){
+              // 如果当前的和小于0,加上这个和会让求和变小，舍弃
+              if(curSum < 0)
+                  curSum = i;
+              else
+                  curSum += i;
+              max = Math.max(max,curSum);
+          }
+          return max;
+      }
+  ```
+
+- 动态规划：状态转移：`dp[i] = Math.max(dp[i-1] + nums[i],nums[i])  max = Math.max(max,dp[i])`
+
+- 如果`dp[i-1]`是负数，加上`nums[i]`还不如`nums[i]`本身
+
+  ```java
+  /**
+       执行耗时:1 ms,击败了98.13% 的Java用户
+       内存消耗:44.6 MB,击败了96.66% 的Java用户
+       */
+      public int maxSubArray(int[] nums){
+          int[] dp = new int[nums.length];
+          int res = Integer.MIN_VALUE;
+          for(int i = 0 ; i < nums.length ; i++){
+              if(i > 0 && dp[i - 1] > 0){
+                  dp[i] = dp[i - 1] + nums[i];
+              }
+              else {
+                  dp[i] = nums[i];
+              }
+              res = Math.max(res,dp[i]);
+          }
+          return res;
+      }
+  ```
+
+  
 
 
 
