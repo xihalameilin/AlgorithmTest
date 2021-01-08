@@ -9,7 +9,8 @@ public class Task implements Callable<Integer> {
         return 2;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
+        new Task().getClass().newInstance();
         ExecutorService executor = Executors.newCachedThreadPool();
         Task task = new Task();
         Future<Integer> result = executor.submit(task);
