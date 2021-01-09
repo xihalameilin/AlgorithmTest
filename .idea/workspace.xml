@@ -7,16 +7,9 @@
     <list default="true" id="aa772e24-2e2f-4a92-b115-82b69e3dc365" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo$MyThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo$MyThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Task.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/ShuZiXuLieZhongMouYiWeiDeShuZiLcof$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/ShuZiXuLieZhongMouYiWeiDeShuZiLcof$Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mutipleThread/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mutipleThread/Demo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mutipleThread/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mutipleThread/Task.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 55 - I.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 55 - I.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,13 +117,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,7 +152,8 @@
       <workItem from="1609900860032" duration="13678000" />
       <workItem from="1609983827071" duration="6147000" />
       <workItem from="1610019020716" duration="2719000" />
-      <workItem from="1610072085786" duration="6087000" />
+      <workItem from="1610072085786" duration="6737000" />
+      <workItem from="1610168360748" duration="6258000" />
     </task>
     <servers />
   </component>
@@ -189,9 +185,13 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1258" height="401" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1610021242130" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1609988247150">
+    <state x="936" y="330" width="672" height="677" key="run.anything.popup" timestamp="1610108075277">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1609988247150" />
+    <state x="936" y="330" width="672" height="677" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1610108075277" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1610108030547">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1610108030547" />
   </component>
 </project>

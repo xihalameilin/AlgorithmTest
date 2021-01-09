@@ -29,7 +29,7 @@ package offer.leetcode.editor.cn;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ErChaShuDeShenDuLcof{
+class ErChaShuDeShenDuLcof{
     public static void main(String[] args) {
         Solution solution = new ErChaShuDeShenDuLcof().new Solution();
         
@@ -52,10 +52,10 @@ public class ErChaShuDeShenDuLcof{
  * }
  */
 class Solution {
-    /**
-     执行耗时:0 ms,击败了100.00% 的Java用户
-     内存消耗:38.1 MB,击败了92.83% 的Java用户
-     */
+//    /**
+//     执行耗时:0 ms,击败了100.00% 的Java用户
+//     内存消耗:38.1 MB,击败了92.83% 的Java用户
+//     */
 //    public int maxDepth(TreeNode root) {
 //        if(root != null)
 //            return 1 + Math.max(maxDepth(root.left),maxDepth(root.right));
@@ -63,29 +63,52 @@ class Solution {
 //            return 0;
 //    }
 
+//    /**
+//     执行耗时:1 ms,击败了20.90% 的Java用户
+//     内存消耗:38.2 MB,击败了88.34% 的Java用户
+//     */
+//    public int maxDepth(TreeNode root) {
+//        Queue<TreeNode> queue = new LinkedList<>();
+//        if(root == null)
+//            return 0;
+//        queue.offer(root);
+//        int height = 0;
+//        while(!queue.isEmpty()){
+//            height++;
+//            int size = queue.size();
+//            while(size-- > 0){
+//                TreeNode treeNode = queue.poll();
+//                if(treeNode.left != null)
+//                    queue.add(treeNode.left);
+//                if(treeNode.right != null)
+//                    queue.add(treeNode.right);
+//            }
+//        }
+//        return height;
+//    }
+
+
+    //dfs
     /**
-     执行耗时:1 ms,击败了20.90% 的Java用户
-     内存消耗:38.2 MB,击败了88.34% 的Java用户
+     执行耗时:0 ms,击败了100.00% 的Java用户
+     内存消耗:38.3 MB,击败了77.23% 的Java用户
      */
+    int res = 0;
     public int maxDepth(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        if(root == null)
-            return 0;
-        queue.offer(root);
-        int height = 0;
-        while(!queue.isEmpty()){
-            height++;
-            int size = queue.size();
-            while(size-- > 0){
-                TreeNode treeNode = queue.poll();
-                if(treeNode.left != null)
-                    queue.add(treeNode.left);
-                if(treeNode.right != null)
-                    queue.add(treeNode.right);
-            }
-        }
-        return height;
+        dfs(root,0);
+        return res;
     }
+
+    private void dfs(TreeNode root,int depth){
+        if(root == null){
+            res = Math.max(res,depth);
+            return;
+        }
+        dfs(root.left,depth + 1);
+        dfs(root.right,depth + 1);
+    }
+
+
 }
 //leetcode submit region end(Prohibit modification and deletion)
 
