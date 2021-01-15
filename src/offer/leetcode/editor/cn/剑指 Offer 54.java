@@ -35,7 +35,7 @@ package offer.leetcode.editor.cn;
 
 import java.util.*;
 
-public class ErChaSouSuoShuDeDiKdaJieDianLcof{
+ class ErChaSouSuoShuDeDiKdaJieDianLcof{
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();

@@ -23,7 +23,7 @@ package offer.leetcode.editor.cn;
 // Related Topics 数组 二分查找 
 // 👍 92 👎 0
 
-public class QueShiDeShuZiLcof{
+ class QueShiDeShuZiLcof{
     public static void main(String[] args) {
         Solution solution = new QueShiDeShuZiLcof().new Solution();
         

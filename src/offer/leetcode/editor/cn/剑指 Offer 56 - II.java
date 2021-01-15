@@ -28,8 +28,12 @@ package offer.leetcode.editor.cn;
 
  class ShuZuZhongShuZiChuXianDeCiShuIiLcof{
     public static void main(String[] args) {
-        Solution solution = new ShuZuZhongShuZiChuXianDeCiShuIiLcof().new Solution();
-        
+        String s1 = new String("java");
+        String s2 = "java";
+        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));
+        short i = 1;
+        i++;
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)

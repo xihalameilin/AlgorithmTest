@@ -68,7 +68,7 @@ class Solution {
      */
     List<List<Integer>> res = new ArrayList<>();
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
-        dfs(new ArrayList<>(),root,0,sum);
+        dfsII(new ArrayList<>(),root,0,sum);
         return res;
     }
 
@@ -88,6 +88,30 @@ class Solution {
         dfs(temp,treeNode.left,tempSum,sum);
         dfs(temp,treeNode.right,tempSum,sum);
         temp.remove(temp.size()-1);
+    }
+
+
+
+
+
+
+
+
+
+    private void dfsII(List<Integer> temp,TreeNode treeNode,int tempSum,int sum){
+        if(treeNode == null)
+            return;
+        temp.add(treeNode.val);
+        tempSum += treeNode.val;
+        if(treeNode.left == null && treeNode.right == null){
+            if(tempSum == sum){
+                res.add(new ArrayList<>(temp));
+            }
+            return;
+        }
+        dfs(temp,treeNode.left,tempSum,sum);
+        dfs(temp,treeNode.right,tempSum,sum);
+        temp.remove(temp.size() - 1);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
