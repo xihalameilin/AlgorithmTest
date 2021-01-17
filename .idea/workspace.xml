@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa772e24-2e2f-4a92-b115-82b69e3dc365" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 34.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 34.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 53 - II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 53 - II.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 54.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 54.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 56 - II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/剑指 Offer 56 - II.java" afterDir="false" />
-    </list>
+    <list default="true" id="aa772e24-2e2f-4a92-b115-82b69e3dc365" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,6 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/offer/leetcode/editor/cn" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,6 +45,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\AlgorithmTest\src\offer\leetcode\editor\cn" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.testImpl">
     <configuration name="BaZiFuChuanZhuanHuanChengZhengShuLcof" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -121,19 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.testImpl" />
@@ -161,7 +144,7 @@
       <workItem from="1610244861549" duration="5056000" />
       <workItem from="1610331992475" duration="1914000" />
       <workItem from="1610432909143" duration="14910000" />
-      <workItem from="1610681999414" duration="3152000" />
+      <workItem from="1610681999414" duration="3852000" />
     </task>
     <servers />
   </component>
@@ -177,22 +160,22 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1610019040750" />
-    <state width="1258" height="399" key="GridCell.Tab.0.bottom" timestamp="1610686091023">
+    <state width="1258" height="399" key="GridCell.Tab.0.bottom" timestamp="1610689807561">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1610686091023" />
-    <state width="1258" height="399" key="GridCell.Tab.0.center" timestamp="1610686091023">
+    <state width="1258" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807561" />
+    <state width="1258" height="399" key="GridCell.Tab.0.center" timestamp="1610689807545">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1610686091023" />
-    <state width="1258" height="399" key="GridCell.Tab.0.left" timestamp="1610686091023">
+    <state width="1258" height="399" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807545" />
+    <state width="1258" height="399" key="GridCell.Tab.0.left" timestamp="1610689807545">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1610686091023" />
-    <state width="1258" height="399" key="GridCell.Tab.0.right" timestamp="1610686091023">
+    <state width="1258" height="399" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807545" />
+    <state width="1258" height="399" key="GridCell.Tab.0.right" timestamp="1610689807545">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1610686091023" />
+    <state width="1258" height="399" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807545" />
     <state x="654" y="310" key="new project wizard" timestamp="1610683873490">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
