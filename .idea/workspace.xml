@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/offer/leetcode/editor/cn/316.java" line="55" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa772e24-2e2f-4a92-b115-82b69e3dc365" name="Default Changelist" comment="" />
+    <list default="true" id="83317468-ef9e-47fd-8c4e-37afddb69441" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithmLession/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithmLession/search3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/leetcode/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/leetcode/editor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/testImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/java8/testImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo$MyThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo$MyThread.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/mutipleThread/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/剑指offer题目.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/offer/leetcode/editor/cn/剑指offer题目.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/socket/tcp/TCPServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test$MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test$MyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AlgorithmTest/sort/Test2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java8/testImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java8/testImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mutipleThread/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mutipleThread/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mutipleThread/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mutipleThread/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/all.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/offer/leetcode/editor/cn/translation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/tcp/TCPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/tcp/TCPClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/socket/tcp/TCPServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/socket/tcp/TCPServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sort/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sort/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sort/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sort/Test2.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,51 +41,227 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>HashEntry</find>
+      <find>transfer</find>
+      <find>shutdown</find>
+      <find>get</find>
+      <find>hashcode</find>
+      <find>hashmap</find>
+      <find>resize</find>
+      <find>hash</find>
+      <find>hashCode</find>
+      <find>thread</find>
+      <find>execute</find>
+      <find>submit</find>
+      <find>equals</find>
+      <find>contains</find>
+      <find>alert</find>
+      <find>sort</find>
+      <find>Iterator</find>
+      <find>KeySet</find>
+      <find>put</find>
+      <find>putVal</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\IntelliJ IDEA 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
     </option>
   </component>
-  <component name="ProjectId" id="1mdkGhdPjbyyvX7xWL5DpHvvTkl" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/meituan/t6/Test1.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t6/Test2.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t6/Test3.java" />
+        <option value="$PROJECT_DIR$/src/meituan/Test1.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t5/Test1.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t5/Test2.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t5/Test3.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t11/Test1.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t11/Test2.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t11/Test3.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/qigouwu.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t11/Test4.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t11/Test5.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t11/Test6.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t11/Test7.java" />
+        <option value="$PROJECT_DIR$/src/meituan/t5/Test.java" />
+        <option value="$PROJECT_DIR$/src/baidu/Test1.java" />
+        <option value="$PROJECT_DIR$/src/baidu/Test2.java" />
+        <option value="$PROJECT_DIR$/src/baidu/Test3.java" />
+        <option value="$PROJECT_DIR$/src/baidu/Test4.java" />
+        <option value="$PROJECT_DIR$/src/baidu/Test5.java" />
+        <option value="$PROJECT_DIR$/src/baidu/Test6.java" />
+        <option value="$PROJECT_DIR$/src/meituan/prepare.java" />
+        <option value="$PROJECT_DIR$/src/meituan/prepare/prepare.java" />
+        <option value="$PROJECT_DIR$/src/mutipleThread/LockDemo.java" />
+        <option value="$PROJECT_DIR$/src/mutipleThread/ForkJoinExample.java" />
+        <option value="$PROJECT_DIR$/src/sort/Test2.java" />
+        <option value="$PROJECT_DIR$/src/baidu/MapDemo.java" />
+        <option value="$PROJECT_DIR$/src/wy/Test1.java" />
+        <option value="$PROJECT_DIR$/src/wy/Test3.java" />
+        <option value="$PROJECT_DIR$/src/wy/Test2.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/zhengshuchaxun.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/duichengzifuchuan.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/nengfouchenghuan.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/shuzichongzuzhenghewenti.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/hezuidalianxujiangxu.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/juliwenti.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/zifuchuanpipei.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/zuichanggonggongzixulie.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/niufanzhiwent.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/3-8.py" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/3-6.py" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/zijuzhen.java" />
+        <option value="$PROJECT_DIR$/src/algorithmLession/homework3/qujiandikxiao.java" />
+        <option value="$PROJECT_DIR$/src/huawei.java" />
+        <option value="$PROJECT_DIR$/src/huawei/Test4.java" />
+        <option value="$PROJECT_DIR$/src/huawei/Test3.java" />
+        <option value="$PROJECT_DIR$/src/huawei/Test2.java" />
+        <option value="$PROJECT_DIR$/src/huawei/Test1.java" />
+        <option value="$PROJECT_DIR$/src/ms/Test2.java" />
+        <option value="$PROJECT_DIR$/src/sort/MergeCount.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
+  </component>
+  <component name="ProjectId" id="1s6G8SRaIX2uAANtLsrkPqx69RJ" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages ProjectPane="false" />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="AlgorithmTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgorithmTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgorithmTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgorithmTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgorithmTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgorithmTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithmLession" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgorithmTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgorithmTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="ms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgorithmTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgorithmTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mutipleThread" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AlgorithmTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AlgorithmTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sort" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList&#10;Arrays&#9;PSI&#9;JAVA://java.util.Arrays&#10;AbstractQueuedSynchronizer&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedSynchronizer&#10;AbstractQ&#9;PSI&#9;JAVA://java.util.concurrent.locks.AbstractQueuedSynchronizer&#10;Object&#9;PSI&#9;JAVA://java.lang.Object&#10;HashM&#9;PSI&#9;JAVA://java.util.HashMap&#10;HashMap&#9;null&#9;null&#10;ByteBu&#9;PSI&#9;JAVA://java.nio.ByteBuffer&#10;TreeSet&#9;PSI&#9;JAVA://java.util.TreeSet&#10;Collections&#9;PSI&#9;JAVA://java.util.Collections&#10;StringBuffer&#9;PSI&#9;JAVA://java.lang.StringBuffer&#10;String&#9;PSI&#9;JAVA://java.lang.String&#10;TreeMap&#9;PSI&#9;JAVA://java.util.TreeMap&#10;LinkedHash&#9;PSI&#9;JAVA://java.util.LinkedHashMap&#10;LinkedL&#9;PSI&#9;JAVA://java.util.LinkedList&#10;HashMao&#9;null&#9;null&#10;Map&#9;PSI&#9;JAVA://java.util.Map&#10;Collection&#9;PSI&#9;JAVA://java.util.Collection&#10;Reen&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/rt.jar!/java/util/concurrent/locks/ReentrantLock.class&#10;AtomicIn&#9;PSI&#9;JAVA://java.util.concurrent.atomic.AtomicInteger&#10;ThreadPool&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/ThreadPoolExecutor.java&#10;classLoad&#9;PSI&#9;JAVA://java.lang.ClassLoader&#10;Thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/ThreadPoolExecutor.java&#10;thread&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/ThreadPoolExecutor.java&#10;hashmap&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/HashMap.java&#10;priori&#9;PSI&#9;JAVA://java.util.PriorityQueue&#10;HashTa&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Hashtable.java&#10;ThreadEX&#9;PSI&#9;JAVA://java.util.concurrent.ThreadPoolExecutor&#10;concurrentHash&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/ConcurrentHashMap.java&#10;StringBuilder&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/StringBuilder.java&#10;object&#9;PSI&#9;JAVA://java.lang.Object&#10;HashmAP&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/HashMap.java&#10;hashen&#9;PSI&#9;JAVA://com.sun.org.apache.xml.internal.dtm.ref.ExpandedNameTable.HashEntry&#10;concurrent&#9;PSI&#9;JAVA://java.util.concurrent.ConcurrentHashMap&#10;Integer&#9;PSI&#9;JAVA://java.lang.Integer&#10;hashtable&#9;PSI&#9;JAVA://java.util.Hashtable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/offer/leetcode/editor/cn" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../嵌入式/jetlinks-community" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\AlgorithmTest\src\offer\leetcode\editor\cn" />
+      <recent name="D:\AlgorithmTest\src\meituan\md" />
+      <recent name="D:\AlgorithmTest\src\front" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testImpl">
-    <configuration name="BaZiFuChuanZhuanHuanChengZhengShuLcof" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="offer.leetcode.editor.cn.BaZiFuChuanZhuanHuanChengZhengShuLcof" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MergeCount">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="MergeCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sort.MergeCount" />
       <module name="AlgorithmTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="offer.leetcode.editor.cn.*" />
+          <option name="PATTERN" value="sort.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,12 +269,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ErChaShuDeZuiJinGongGongZuXianLcof" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="offer.leetcode.editor.cn.ErChaShuDeZuiJinGongGongZuXianLcof" />
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="huawei.Test1" />
       <module name="AlgorithmTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="offer.leetcode.editor.cn.*" />
+          <option name="PATTERN" value="huawei.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +283,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GouJianChengJiShuZuLcof" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="offer.leetcode.editor.cn.GouJianChengJiShuZuLcof" />
+    <configuration name="Test2 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ms.Test2" />
       <module name="AlgorithmTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="offer.leetcode.editor.cn.*" />
+          <option name="PATTERN" value="ms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +297,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="YuanQuanZhongZuiHouShengXiaDeShuZiLcof" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="offer.leetcode.editor.cn.YuanQuanZhongZuiHouShengXiaDeShuZiLcof" />
+    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="huawei.Test2" />
       <module name="AlgorithmTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="offer.leetcode.editor.cn.*" />
+          <option name="PATTERN" value="huawei.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +311,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="testImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="java8.testImpl" />
+    <configuration name="Test3 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="huawei.Test3" />
       <module name="AlgorithmTest" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="java8.*" />
+          <option name="PATTERN" value="huawei.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,76 +325,648 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Test3 (1)" />
+      <item itemvalue="Application.Test2" />
+      <item itemvalue="Application.Test1" />
+      <item itemvalue="Application.Test2 (1)" />
+      <item itemvalue="Application.MergeCount" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.testImpl" />
-        <item itemvalue="Application.ErChaShuDeZuiJinGongGongZuXianLcof" />
-        <item itemvalue="Application.BaZiFuChuanZhuanHuanChengZhengShuLcof" />
-        <item itemvalue="Application.GouJianChengJiShuZuLcof" />
-        <item itemvalue="Application.YuanQuanZhongZuiHouShengXiaDeShuZiLcof" />
+        <item itemvalue="Application.MergeCount" />
+        <item itemvalue="Application.Test2 (1)" />
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.Test2" />
+        <item itemvalue="Application.Test3 (1)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aa772e24-2e2f-4a92-b115-82b69e3dc365" name="Default Changelist" comment="" />
-      <created>1609830764030</created>
+      <changelist id="83317468-ef9e-47fd-8c4e-37afddb69441" name="Default" comment="" />
+      <created>1610969820565</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1609830764030</updated>
-      <workItem from="1609830767564" duration="2627000" />
-      <workItem from="1609900860032" duration="13678000" />
-      <workItem from="1609983827071" duration="6147000" />
-      <workItem from="1610019020716" duration="2719000" />
-      <workItem from="1610072085786" duration="6737000" />
-      <workItem from="1610168360748" duration="9689000" />
-      <workItem from="1610244861549" duration="5056000" />
-      <workItem from="1610331992475" duration="1914000" />
-      <workItem from="1610432909143" duration="14910000" />
-      <workItem from="1610681999414" duration="3852000" />
+      <updated>1610969820565</updated>
+      <workItem from="1610969822320" duration="1092000" />
+      <workItem from="1611046977619" duration="870000" />
+      <workItem from="1611122720889" duration="11588000" />
+      <workItem from="1611195026430" duration="10774000" />
+      <workItem from="1611283496176" duration="1476000" />
+      <workItem from="1611464762269" duration="1808000" />
+      <workItem from="1611758480156" duration="704000" />
+      <workItem from="1611800265581" duration="676000" />
+      <workItem from="1611906088532" duration="5656000" />
+      <workItem from="1611988626160" duration="6061000" />
+      <workItem from="1612071953908" duration="582000" />
+      <workItem from="1612158655481" duration="524000" />
+      <workItem from="1612171514068" duration="3287000" />
+      <workItem from="1612246194154" duration="3397000" />
+      <workItem from="1612317618456" duration="3118000" />
+      <workItem from="1613646105529" duration="598000" />
+      <workItem from="1614582665032" duration="599000" />
+      <workItem from="1614779275118" duration="1117000" />
+      <workItem from="1614852966049" duration="4847000" />
+      <workItem from="1614908758784" duration="595000" />
+      <workItem from="1614948120462" duration="1615000" />
+      <workItem from="1615004870508" duration="911000" />
+      <workItem from="1615020726453" duration="7284000" />
+      <workItem from="1615081557338" duration="10111000" />
+      <workItem from="1615167996093" duration="7791000" />
+      <workItem from="1615253488435" duration="9936000" />
+      <workItem from="1615342608605" duration="2138000" />
+      <workItem from="1615425276974" duration="23302000" />
+      <workItem from="1615517749911" duration="4049000" />
+      <workItem from="1615601106296" duration="7000" />
+      <workItem from="1615622112608" duration="7886000" />
+      <workItem from="1615786736557" duration="3847000" />
+      <workItem from="1615959516794" duration="3231000" />
+      <workItem from="1615981038451" duration="2213000" />
+      <workItem from="1616034072080" duration="9589000" />
+      <workItem from="1616118830346" duration="12812000" />
+      <workItem from="1616219829358" duration="28566000" />
+      <workItem from="1616380312620" duration="4343000" />
+      <workItem from="1616487460416" duration="20000" />
+      <workItem from="1616559467686" duration="7816000" />
+      <workItem from="1616644181706" duration="2345000" />
+      <workItem from="1616828178956" duration="6313000" />
+      <workItem from="1616929158850" duration="640000" />
+      <workItem from="1616980908919" duration="4256000" />
+      <workItem from="1617185766288" duration="5775000" />
+      <workItem from="1617264981953" duration="1037000" />
+      <workItem from="1617618928203" duration="3470000" />
+      <workItem from="1617686283988" duration="2417000" />
+      <workItem from="1617780330222" duration="1286000" />
+      <workItem from="1618020627645" duration="1992000" />
+      <workItem from="1618191464148" duration="1725000" />
+      <workItem from="1618279930951" duration="2597000" />
+      <workItem from="1618319129391" duration="649000" />
+      <workItem from="1618367159248" duration="339000" />
+      <workItem from="1618640346699" duration="1751000" />
+      <workItem from="1618756354821" duration="1489000" />
+      <workItem from="1619319082824" duration="599000" />
+      <workItem from="1620184314370" duration="622000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="246138000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31242874" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5018787" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957596" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="leetcode" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957596" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34207526" sideWeight="0.49812132" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31356898" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20343532" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2226047" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959743" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.49812132" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5018787" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959743" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31293613" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="leetcode" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32957596" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26795894" sideWeight="0.49812132" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31356898" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22007515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.49812132" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="1085" y="401" key="#com.intellij.ide.util.MemberChooser" timestamp="1610021199737">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1085" y="401" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1610021199737" />
-    <state x="1060" y="455" key="FileChooserDialogImpl" timestamp="1610019040750">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1060" y="455" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1610019040750" />
-    <state width="1258" height="399" key="GridCell.Tab.0.bottom" timestamp="1610689807561">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807561" />
-    <state width="1258" height="399" key="GridCell.Tab.0.center" timestamp="1610689807545">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.center/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807545" />
-    <state width="1258" height="399" key="GridCell.Tab.0.left" timestamp="1610689807545">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.left/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807545" />
-    <state width="1258" height="399" key="GridCell.Tab.0.right" timestamp="1610689807545">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1258" height="399" key="GridCell.Tab.0.right/0.0.2560.1400@0.0.2560.1400" timestamp="1610689807545" />
-    <state x="654" y="310" key="new project wizard" timestamp="1610683873490">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="654" y="310" key="new project wizard/0.0.2560.1400@0.0.2560.1400" timestamp="1610683873490" />
-    <state x="936" y="330" width="672" height="677" key="run.anything.popup" timestamp="1610108075277">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="936" y="330" width="672" height="677" key="run.anything.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1610108075277" />
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1610333294290">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1610333294290" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algorithmLession/anzhaolingyigeshuzupaixu.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algorithmLession/anzhaolingyigeshuzupaixu.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algorithmLession/anzhaolingyigeshuzupaixu.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/algorithmLession/search3.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14094">
+          <caret line="565" column="53" lean-forward="false" selection-start-line="565" selection-start-column="53" selection-end-line="565" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/baidu/MapDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="30" column="34" lean-forward="false" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3.java" />
+    <entry file="file://$PROJECT_DIR$/src/bytedance/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/zuichanggonggongzixulie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="67" column="1" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="67" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/zifuchuanpipei.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="632">
+          <caret line="95" column="1" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="95" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/zhengshuchaxun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/shuzichongzuzhenghewenti.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="50" column="1" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="50" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/niufanzhiwent.java" />
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/nengfouchenghuan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/juliwenti.java" />
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/hezuidalianxujiangxu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="891">
+          <caret line="33" column="1" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/duichengzifuchuan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/zijuzhen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="40" column="7" lean-forward="false" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/3-6.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/3-8.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="12" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/homework3/qujiandikxiao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/huawei.java" />
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/yuanma/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/huawei/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/huawei/Test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="30" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/huawei/Test3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/huawei/Test4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1674">
+          <caret line="62" column="32" lean-forward="false" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wy/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wy/Test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/wy/Test3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="69" column="30" lean-forward="false" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pailie/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ms/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ms/Test2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="70" column="21" lean-forward="false" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="255" column="17" lean-forward="false" selection-start-line="255" selection-start-column="17" selection-end-line="255" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/xierpaixu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sort/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2052">
+          <caret line="78" column="44" lean-forward="false" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/qipanfugai.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/charupaixu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/chongwuwutuse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/feidiguiguibing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="30" column="72" lean-forward="false" selection-start-line="30" selection-start-column="72" selection-end-line="30" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/feidiguikuaisupaixu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/fenpeiwenti.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/guangduyouxianbianli.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/hebingshuzu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/Heweidingzhishuzu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/jishupaixu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/Keliuliang.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/LessonScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/search3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/searching4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/shenduyouxianbianli.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/algorithmLession/shuxuegongshi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sort/MergeCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.19862227" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

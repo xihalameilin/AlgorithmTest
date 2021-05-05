@@ -3,7 +3,8 @@ package sort;
 public class Test {
 
     public static void main(String[] args) {
-        mergeSort(array,0,array.length-1,new int[array.length]);
+        //mergeSort(array,0,array.length-1,new int[array.length]);
+        quickSort(array,0,array.length-1);
         print(array);
     }
 
@@ -17,7 +18,33 @@ public class Test {
 
     }
 
-    private static int[] array = {20,8,75,45,60};
+    private static void quickSort(int[] array,int left,int right){
+        if(left < right){
+            int key = array[right];
+            int i = left;
+            int j = right;
+            while(i < j ){
+                while (i < j && array[j] >= key){
+                    j--;
+                }
+                while(i < j && array[i] <= key){
+                    i++;
+                }
+                swap(array,i,j);
+            }
+            swap(array,i,right);
+            quickSort(array,left,i - 1);
+            quickSort(array,i + 1,right);
+        }
+    }
+
+    private static void swap(int[] array,int l,int r){
+        int t = array[l];
+        array[l] = array[r];
+        array[r] = t;
+    }
+
+    private static int[] array = {3,5,5,3};
 
     public static void print(int[] array){
         for(int a:array){

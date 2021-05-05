@@ -9,9 +9,11 @@ import java.net.Socket;
 public class TCPServer {
     public static void main(String[] args) throws Exception{
         //创建服务端Socket并明确端口号
-        ServerSocket serverSocket = new ServerSocket(10000);
+        ServerSocket serverSocket = new ServerSocket(10001);
         //获取客户端的Socket
         Socket socket = serverSocket.accept();
+
+        System.out.println("link");
 
         InputStream inputStream = socket.getInputStream();
 

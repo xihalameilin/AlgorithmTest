@@ -1,6 +1,7 @@
 package mutipleThread;
 
 import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Task implements Callable<Integer> {
     @Override
@@ -9,18 +10,43 @@ public class Task implements Callable<Integer> {
         return 2;
     }
 
-    public static void main(String[] args) throws IllegalAccessException, InstantiationException {
-        new Task().getClass().newInstance();
-        ExecutorService executor = Executors.newCachedThreadPool();
-        Task task = new Task();
-        Future<Integer> result = executor.submit(task);
 
-        try {
-            System.out.println(result.get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
+
+    private static void demo4(){
+        AtomicInteger ctl = new AtomicInteger(2);
+        Thread a = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                for(;;) {
+                    if (ctl.compareAndSet(1, 2)) {
+                        System.out.println("success");
+                        break;
+                    }
+                    else{
+                        System.out.println("fail");
+                    }
+                }
+                System.out.println("end");
+            }
+        });
+
+        Thread b = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                    ctl.set(1);
+                } catch (InterruptedException e) {
+
+                }
+            }
+        });
+
+        b.start();
+        a.start();
+    }
+
+    public static void main(String[] args) {
+        demo4();
     }
 }

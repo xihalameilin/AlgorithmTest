@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 50%;height:500px;margin-left: 25%"></div>
+<script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    window.onload = function () {
+        init()
+    }
+    var option
+    function init() {
+        var myChart = echarts.init(document.getElementById('main'),'dark');
+        $.ajax({
+            //url: "http://49.235.238.192:8889/hello",
+            url: "data.json",
+            type:"GET",
+            success: function(graph) {
+                console.log(graph)
+                graph.nodes.forEach(function (node) {
+                    node.label = {
+                        show: node.symbolSize > 30
+                    };
+                });
+                option = {
+                    title: {
+                        text: '知识图谱结果',
+                        subtext: 'Default layout',
+                        top: 'bottom',
+                        left: 'right'
+                    },
+                    tooltip: {},
+                    legend: [{
+                        // selectedMode: 'single',
+                        data: graph.categories.map(function (a) {
+                            return a.name;
+                        })
+                    }],
+                    animationDuration: 1500,
+                    animationEasingUpdate: 'quinticInOut',
+                    series: [
+                        {
+                            name: '知识图谱节点',
+                            type: 'graph',
+                            layout: 'none',
+                            data: graph.nodes,
+                            links: graph.links,
+                            categories: graph.categories,
+                            roam: true,
+                            label: {
+                                position: 'right',
+                                formatter: '{b}'
+                            },
+                            lineStyle: {
+                                color: 'source',
+                                curveness: 0.3
+                            },
+                            emphasis: {
+                                focus: 'adjacency',
+                                lineStyle: {
+                                    width: 10
+                                }
+                            }
+                        }
+                    ]
+                };
+                myChart.setOption(option);
+                myChart.on('click', function (param){
+                    alert(param.data.id)
+                });
+            },
+            error: function(data) {
+                alert("请求出错");
+                console.log(data)
+            }
+        });
+    }
+</script>
+</body>
+</html>

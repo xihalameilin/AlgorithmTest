@@ -1,12 +1,35 @@
 package java8;
 
 public class testImpl implements test{
-  public static void main(String[] args) {
 
-      new testImpl().f();
-      new testImpl().f2();
-  }
-  void f2(){
-    System.out.println(2);
-  }
+    private static int count = 0;
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 2; i++) {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(10);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    //每个线程让count自增100次
+                    for (int i = 0; i < 100; i++) {
+                        synchronized (testImpl.class){
+                            count++;
+                        }
+
+                    }
+                }
+            }).start();
+        }
+
+        try{
+            Thread.sleep(2000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        System.out.println(count);
+    }
 }
